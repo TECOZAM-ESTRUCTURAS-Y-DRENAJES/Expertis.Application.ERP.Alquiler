@@ -4,8 +4,10 @@ Public Class CIFacturacion
 
     Private Const cnPROPUESTACIERRE As String = "Propuesta Cierre Ordenes"
     Private Const cnCALCULARVTOS As String = "Calcular Vencimientos Alquiler"
-    Private Const cnCALCULARCOSTES As String = "Movimientos de consumibles."
-    Private Const cnCALCULARCOSTESRESUMEN As String = "Resumen consumibles."
+    Private Const cnCALCULARCOSTES20 As String = "Movimientos de consumibles Tipo 20."
+    Private Const cnCALCULARCOSTESRESUMEN As String = "Resumen consumibles Tipo 20."
+    Private Const cnCALCULARCOSTES As String = "Movimientos de consumibles Tipo 30."
+    Private Const cnCALCULARCOSTESRESUMEN2 As String = "Resumen consumibles Tipo 30."
     Private Const CNMOVIMIENTOSELECTROPORATIL As String = "Movimientos de electroportatil."
     Private Const CNRESUMENELECTROPORATIL As String = "Resumen electroportatil."
 
@@ -49,8 +51,11 @@ Public Class CIFacturacion
         Me.FormActions.Add(cnCALCULARVTOS, AddressOf CalcularVtosAlquiler, ExpertisApp.GetIcon("alarmclock_run.ico"))
         Me.AddSeparator()
         'Informes Jose Arribas
-        Me.FormActions.Add(cnCALCULARCOSTES, AddressOf CalcularCostes, ExpertisApp.GetIcon("alarmclock_run.ico"))
+        Me.FormActions.Add(cnCALCULARCOSTES20, AddressOf CalcularCostes20, ExpertisApp.GetIcon("alarmclock_run.ico"))
         Me.FormActions.Add(cnCALCULARCOSTESRESUMEN, AddressOf CalcularCostesResumen, ExpertisApp.GetIcon("alarmclock_run.ico"))
+        Me.AddSeparator()
+        Me.FormActions.Add(cnCALCULARCOSTES, AddressOf CalcularCostes, ExpertisApp.GetIcon("alarmclock_run.ico"))
+        Me.FormActions.Add(cnCALCULARCOSTESRESUMEN2, AddressOf CalcularCostesResumen2, ExpertisApp.GetIcon("alarmclock_run.ico"))
         Me.AddSeparator()
         Me.FormActions.Add(CNMOVIMIENTOSELECTROPORATIL, AddressOf CalcularCostesElectroportatil, ExpertisApp.GetIcon("alarmclock_run.ico"))
         Me.FormActions.Add(CNRESUMENELECTROPORATIL, AddressOf CalcularResumenElectroportatil, ExpertisApp.GetIcon("alarmclock_run.ico"))
@@ -116,6 +121,91 @@ Public Class CIFacturacion
     Private Sub PropuestaCierreOrdenes()
         ExpertisApp.OpenForm("PROCIERRE")
     End Sub
+    Private Sub CalcularCostes20()
+        Dim blnCancel As Boolean
+        If Length(cbxFechaCalculo.Value) = 0 Then
+            If ExpertisApp.GenerateMessage("No se ha seleccionado una Fecha de Cálculo. Por defecto se cogerá la fecha actual. ¿Desea continuar.?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.No Then blnCancel = True
+        End If
+
+        If Not blnCancel Then
+            Dim strMessage As String = "El proceso puede tardar varios minutos. ¿Desea continuar?."
+            If Length(AdvObraDesde.Value) = 0 And Length(AdvObraHasta.Value) = 0 And Length(AdvClienteDesde.Value) = 0 _
+                And Length(AdvClienteHasta.Value) = 0 And Length(AdvIDCentroGestion.Value) = 0 And Length(AdvIDArticulo.Value) = 0 _
+                And Length(AdvTipoArticulo.Value) = 0 And Length(AdvFamiliaArticulo.Value) = 0 Then
+                strMessage = "ADVERTENCIA!!!!!! Va a ejecutar el cálculo de la facturación sin haber puesto ningún filtro. Esto ralentizará mucho el sistema y puede bloquear a otros usuarios. Desea continuar con el Proceso?"
+            End If
+            If ValidarFiltrosProcesoCalculo() Then
+                If ExpertisApp.GenerateMessage(strMessage, MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
+                    Me.Cursor = Cursors.WaitCursor
+
+                    If Length(cbxFechaCalculo.Value) = 0 Then cbxFechaCalculo.Value = Date.Today
+
+                    Dim f As New Filter
+                    If Length(AdvObraDesde.Value) > 0 Then f.Add("IDObra", FilterOperator.GreaterThanOrEqual, AdvObraDesde.Value, FilterType.Numeric)
+                    If Length(AdvObraHasta.Value) > 0 Then f.Add("IDObra", FilterOperator.LessThanOrEqual, AdvObraHasta.Value, FilterType.Numeric)
+                    If Length(AdvClienteDesde.Value) > 0 Then f.Add("IDCliente", FilterOperator.GreaterThanOrEqual, AdvClienteDesde.Value, FilterType.String)
+                    'David Velasco 27/10
+                    If Length(AdvTipoArticulo.Value) > 0 Then f.Add("IDTipo", FilterOperator.Equal, AdvTipoArticulo.Value, FilterType.String)
+                    If Length(AdvFamiliaArticulo.Value) > 0 Then f.Add("IDFamilia", FilterOperator.Equal, AdvFamiliaArticulo.Value, FilterType.String)
+                    If Length(AdvIDArticulo.Value) > 0 Then f.Add("IDArticulo", FilterOperator.Equal, AdvIDArticulo.Value, FilterType.String)
+
+                    If Length(cbxFechaDesde.Value) > 0 Then f.Add("FechaAlbaran", FilterOperator.GreaterThanOrEqual, cbxFechaDesde.Value, FilterType.DateTime)
+                    '21/03/22
+                    'If Length(cbxFechaHasta1.Value) > 0 Then f.Add("FechaAlbaran", FilterOperator.GreaterThanOrEqual, cbxFechaHasta.Value, FilterType.DateTime)
+                    If Length(cbxFechaHasta.Value) > 0 Then f.Add("FechaAlbaran", FilterOperator.LessThanOrEqual, cbxFechaHasta.Value, FilterType.DateTime)
+                    'If Length(AdvAlqOVend.Value) > 0 Then f.Add("DescFacturacion", FilterOperator.Equal, AdvAlqOVend.Value, FilterType.String)
+                    'Fin David
+                    If Length(AdvClienteHasta.Value) > 0 Then f.Add("IDCliente", FilterOperator.LessThanOrEqual, AdvClienteHasta.Value, FilterType.String)
+                    If Length(AdvTrabajo.Value) > 0 Then f.Add("IDTrabajo", FilterOperator.Equal, AdvTrabajo.Value, FilterType.Numeric)
+                    If Length(AdvIDCentroGestion.Value) > 0 Then f.Add("IDCentroGestion", FilterOperator.Equal, AdvIDCentroGestion.Value, FilterType.String)
+                    If Length(cbxFechaCalculo.Value) > 0 Then f.Add("FechaAlbaran", FilterOperator.LessThanOrEqual, cbxFechaCalculo.Value, FilterType.DateTime)
+
+                    Dim intDiaFacturacion As Integer
+                    If Length(txtDiaFacturacion.Text) > 0 Then
+                        intDiaFacturacion = txtDiaFacturacion.Text
+                    End If
+                    Dim FechaCalculo As Date = cbxFechaCalculo.Value
+                    If chkTenerEnCuenta.Checked Then
+                        FechaCalculo = New Date(FechaCalculo.Year, FechaCalculo.Month, intDiaFacturacion)
+                    End If
+                    Dim datosVtos As New dataConfigCalculoFacturacion(FechaCalculo, f, intDiaFacturacion, chkTenerEnCuenta.Checked, chkFacturarOrdenesCerradas.Checked, enumomACalculoRiesgoCliente.omANoCalculoRiesgo, AdvClienteDesde.Value)
+                    mdtCalculo = ExpertisApp.ExecuteTask(Of dataConfigCalculoFacturacion, DataTable)(AddressOf CalculoFacturacion.GetLineasFacturacionAlquiler, datosVtos)
+
+                    'GridAlquiler.DataSource = mdtCalculo
+
+                    Dim rp As New Report("INFCOS20")
+
+                    'filtro.Add("Nobra", FilterOperator.Equal, obra)
+
+                    'Tengo que meterle a cada linea en Seguimiento, la unidad
+                    Dim dt As New DataTable
+                    Dim dtAuxiliar As New DataTable
+                    Dim contador As Integer
+                    contador = 0
+                    Dim filtro As New Filter
+
+                    'Recorro linea por linea y le pongo las unidades a cada articulo
+                    For Each dr As DataRow In mdtCalculo.Rows
+                        filtro.Add("IDArticulo", FilterOperator.Equal, mdtCalculo.Rows(contador)("IDArticulo"))
+                        dtAuxiliar = New BE.DataEngine().Filter("tbMaestroArticulo", filtro)
+                        mdtCalculo.Rows(contador)("Seguimiento") = Nz(dtAuxiliar.Rows(0)("IDUdInterna"), "")
+                        contador += 1
+                        filtro.Clear()
+
+                    Next
+                    rp.DataSource = mdtCalculo
+
+
+                    'rp.DataSource = New BE.DataEngine().Filter("vFrmCIObraFacturacion", filtro)
+                    ExpertisApp.OpenReport(rp)
+
+                End If
+            End If
+        Else
+            ExpertisApp.GenerateMessage("Proceso cancelado.", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+    End Sub
+
     Private Sub CalcularCostes()
         Dim blnCancel As Boolean
         If Length(cbxFechaCalculo.Value) = 0 Then
@@ -266,6 +356,72 @@ Public Class CIFacturacion
             ExpertisApp.GenerateMessage("Proceso cancelado.", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
+    Private Sub CalcularCostesResumen2()
+        Dim blnCancel As Boolean
+        If Length(cbxFechaCalculo.Value) = 0 Then
+            If ExpertisApp.GenerateMessage("No se ha seleccionado una Fecha de Cálculo. Por defecto se cogerá la fecha actual. ¿Desea continuar.?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.No Then blnCancel = True
+        End If
+
+        If Not blnCancel Then
+            Dim strMessage As String = "El proceso puede tardar varios minutos. ¿Desea continuar?."
+            If Length(AdvObraDesde.Value) = 0 And Length(AdvObraHasta.Value) = 0 And Length(AdvClienteDesde.Value) = 0 _
+                And Length(AdvClienteHasta.Value) = 0 And Length(AdvIDCentroGestion.Value) = 0 And Length(AdvIDArticulo.Value) = 0 _
+                And Length(AdvTipoArticulo.Value) = 0 And Length(AdvFamiliaArticulo.Value) = 0 Then
+                strMessage = "ADVERTENCIA!!!!!! Va a ejecutar el cálculo de la facturación sin haber puesto ningún filtro. Esto ralentizará mucho el sistema y puede bloquear a otros usuarios. Desea continuar con el Proceso?"
+            End If
+            If ValidarFiltrosProcesoCalculo() Then
+                If ExpertisApp.GenerateMessage(strMessage, MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
+                    Me.Cursor = Cursors.WaitCursor
+
+                    If Length(cbxFechaCalculo.Value) = 0 Then cbxFechaCalculo.Value = Date.Today
+
+                    Dim f As New Filter
+                    If Length(AdvObraDesde.Value) > 0 Then f.Add("IDObra", FilterOperator.GreaterThanOrEqual, AdvObraDesde.Value, FilterType.Numeric)
+                    If Length(AdvObraHasta.Value) > 0 Then f.Add("IDObra", FilterOperator.LessThanOrEqual, AdvObraHasta.Value, FilterType.Numeric)
+                    If Length(AdvClienteDesde.Value) > 0 Then f.Add("IDCliente", FilterOperator.GreaterThanOrEqual, AdvClienteDesde.Value, FilterType.String)
+                    'David Velasco 27/10
+                    If Length(AdvTipoArticulo.Value) > 0 Then f.Add("IDTipo", FilterOperator.Equal, AdvTipoArticulo.Value, FilterType.String)
+                    If Length(AdvFamiliaArticulo.Value) > 0 Then f.Add("IDFamilia", FilterOperator.Equal, AdvFamiliaArticulo.Value, FilterType.String)
+                    If Length(AdvIDArticulo.Value) > 0 Then f.Add("IDArticulo", FilterOperator.Equal, AdvIDArticulo.Value, FilterType.String)
+
+                    If Length(cbxFechaDesde.Value) > 0 Then f.Add("FechaAlbaran", FilterOperator.GreaterThanOrEqual, cbxFechaDesde.Value, FilterType.DateTime)
+                    'If Length(cbxFechaHasta1.Value) > 0 Then f.Add("FechaAlbaran", FilterOperator.GreaterThanOrEqual, cbxFechaHasta.Value, FilterType.DateTime)
+                    If Length(cbxFechaHasta.Value) > 0 Then f.Add("FechaAlbaran", FilterOperator.LessThanOrEqual, cbxFechaHasta.Value, FilterType.DateTime)
+                    'If Length(AdvAlqOVend.Value) > 0 Then f.Add("DescFacturacion", FilterOperator.Equal, AdvAlqOVend.Value, FilterType.String)
+                    'Fin David
+                    If Length(AdvClienteHasta.Value) > 0 Then f.Add("IDCliente", FilterOperator.LessThanOrEqual, AdvClienteHasta.Value, FilterType.String)
+                    If Length(AdvTrabajo.Value) > 0 Then f.Add("IDTrabajo", FilterOperator.Equal, AdvTrabajo.Value, FilterType.Numeric)
+                    If Length(AdvIDCentroGestion.Value) > 0 Then f.Add("IDCentroGestion", FilterOperator.Equal, AdvIDCentroGestion.Value, FilterType.String)
+                    If Length(cbxFechaCalculo.Value) > 0 Then f.Add("FechaAlbaran", FilterOperator.LessThanOrEqual, cbxFechaCalculo.Value, FilterType.DateTime)
+
+                    Dim intDiaFacturacion As Integer
+                    If Length(txtDiaFacturacion.Text) > 0 Then
+                        intDiaFacturacion = txtDiaFacturacion.Text
+                    End If
+                    Dim FechaCalculo As Date = cbxFechaCalculo.Value
+                    If chkTenerEnCuenta.Checked Then
+                        FechaCalculo = New Date(FechaCalculo.Year, FechaCalculo.Month, intDiaFacturacion)
+                    End If
+                    Dim datosVtos As New dataConfigCalculoFacturacion(FechaCalculo, f, intDiaFacturacion, chkTenerEnCuenta.Checked, chkFacturarOrdenesCerradas.Checked, enumomACalculoRiesgoCliente.omANoCalculoRiesgo, AdvClienteDesde.Value)
+                    mdtCalculo = ExpertisApp.ExecuteTask(Of dataConfigCalculoFacturacion, DataTable)(AddressOf CalculoFacturacion.GetLineasFacturacionAlquiler, datosVtos)
+
+                    'GridAlquiler.DataSource = mdtCalculo
+
+                    Dim rp As New Report("INFMOV30")
+                    Dim filtro As New Filter
+                    'filtro.Add("Nobra", FilterOperator.Equal, obra)
+                    rp.DataSource = mdtCalculo
+
+                    'rp.DataSource = New BE.DataEngine().Filter("vFrmCIObraFacturacion", filtro)
+                    ExpertisApp.OpenReport(rp)
+
+                End If
+            End If
+        Else
+            ExpertisApp.GenerateMessage("Proceso cancelado.", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+    End Sub
+
     Private Sub CalcularResumenElectroportatil()
         Dim blnCancel As Boolean
         If Length(cbxFechaCalculo.Value) = 0 Then
