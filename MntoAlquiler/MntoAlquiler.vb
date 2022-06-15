@@ -6993,6 +6993,7 @@ Public Class MntoAlquiler
 
     Private Sub GridMaterial_UpdatingRecord(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles GridMaterial.UpdatingRecord, GridMaterial.AddingRecord
         With GridMaterial
+
             Dim CC As New AltaPlanContable
             If Length(.Value("CCVenta")) > 0 Then
                 e.Cancel = Not CC.ValidaCuentaContable(.Value("CCVenta"), mstrEjercicioActual)

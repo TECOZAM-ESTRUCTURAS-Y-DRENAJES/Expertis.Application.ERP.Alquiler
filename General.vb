@@ -97,6 +97,21 @@ Module General
                         Dim filterOR As New Filter(FilterUnionOperator.Or)
 
                         Dim dtExpedir As DataTable = de.Filter("vAlquilerCIExpedirMateriales", f)
+                        'David Velasco 14/06/22
+                        'Recorro la tabla y si hay alguna fila que tenga de cantidad 0, exit sub
+                        Dim conta As Integer = 0
+                        Try
+                            For Each dr As DataRow In dtExpedir.Rows
+                                If dtExpedir.Rows(conta)("QAlbaran") = 0 Then
+                                    MsgBox("El articulo " & dtExpedir.Rows(conta)("IDMaterial").ToString & " tiene de cantidad 0. Modificalo para generar albaran.")
+                                    Exit Sub
+                                End If
+                                conta += 1
+                            Next
+                        Catch ex As Exception
+
+                        End Try
+                        'David Velasco 14/06/22
                         If Not IsNothing(dtExpedir) AndAlso dtExpedir.Rows.Count > 0 Then
                             If Tipo = enumTipoAlbaran.Albaran Then
                                 GenerarAlbaranSalida(dtExpedir, drTrabajos("IDTrabajo"), oCursor)

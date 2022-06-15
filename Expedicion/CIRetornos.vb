@@ -812,10 +812,18 @@ Public Class CIRetornos
         Me.FormActions.Add("Sustitución de Activo Averiado", AddressOf CambioMaquina, ExpertisApp.GetIcon("gear_replace.ico"))
         Me.AddSeparator()
         Me.FormActions.Add("Recalcular Fechas de Retorno de Días Mínimos", AddressOf RecalcularFechaRetorno, ExpertisApp.GetIcon("clock_refresh.ico"))
-        'David Velasco 21/02
+        'David Velasco 21/02/22
         Me.AddSeparator()
         Me.FormActions.Add("GENERAR VENCIMIENTOS", AddressOf TraspasoMaterialsin011, ExpertisApp.GetIcon("gear_replace.ico"))
+        'David Velasco 14/06/22
+        'Me.AddSeparator()
+        'Me.FormActions.Add("GENERAR VENCIMIENTOS BUENO", AddressOf TraspasoMaterialsin011Bueno, ExpertisApp.GetIcon("gear_replace.ico"))
+
     End Sub
+    'David Velasco 21/02
+    'Private Sub TraspasoMaterialsin011Bueno()
+    '    Expedir(enumTipoExpedicion.Transferencia, False)
+    'End Sub
 
     Private Sub LoadGridActions()
         Grid.Actions.Add(cnABRIRALBARANVENTA, AddressOf VerAlbaran, ExpertisApp.GetIcon("xAlbaranesVenta.ico"))
@@ -883,7 +891,7 @@ Public Class CIRetornos
                         TraspasoInfo = TratarTraspasoMaterial(dtMarcados.Copy)
                         blnCancel = TraspasoInfo Is Nothing
                     End If
-
+                    'David Velasco 14/6/22
                     If Not blnCancel Then blnCancel = ValidaDatosAExpedir(dtMarcados, , tipo = enumTipoExpedicion.Retorno)
                     If Not blnCancel AndAlso dtMarcados.Rows.Count > 0 Then
                         Dim p As New Parametro
