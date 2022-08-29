@@ -387,6 +387,7 @@ Public Class MntoAlquiler
     Friend WithEvents AdvSearch1 As Solmicro.Expertis.Engine.UI.AdvSearch
     Friend WithEvents TextBox2 As Solmicro.Expertis.Engine.UI.TextBox
     Friend WithEvents Button1 As Solmicro.Expertis.Engine.UI.Button
+    Friend WithEvents bGenerarAlbaran As Solmicro.Expertis.Engine.UI.Button
     Friend WithEvents MenuAlquiler As Janus.Windows.UI.CommandBars.UIContextMenu
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
@@ -770,6 +771,7 @@ Public Class MntoAlquiler
         Me.pnlFianzaObligatoria = New Solmicro.Expertis.Engine.UI.Panel
         Me.lblFianzaObligatoria = New Solmicro.Expertis.Engine.UI.Label
         Me.FraArbol = New Solmicro.Expertis.Engine.UI.Frame
+        Me.bGenerarAlbaran = New Solmicro.Expertis.Engine.UI.Button
         Me.txtOServicioFind = New Solmicro.Expertis.Engine.UI.TextBox
         Me.lblOServicioFind = New Solmicro.Expertis.Engine.UI.Label
         Me.rbtMinimizarTree = New Solmicro.Expertis.Engine.UI.RadioButton
@@ -4238,6 +4240,7 @@ Public Class MntoAlquiler
         '
         'FraArbol
         '
+        Me.FraArbol.Controls.Add(Me.bGenerarAlbaran)
         Me.FraArbol.Controls.Add(Me.txtOServicioFind)
         Me.FraArbol.Controls.Add(Me.lblOServicioFind)
         Me.FraArbol.Controls.Add(Me.rbtMinimizarTree)
@@ -4251,6 +4254,15 @@ Public Class MntoAlquiler
         Me.FraArbol.TabIndex = 223
         Me.FraArbol.TabStop = False
         Me.FraArbol.Text = "Criterios árbol"
+        '
+        'bGenerarAlbaran
+        '
+        Me.bGenerarAlbaran.Location = New System.Drawing.Point(171, 10)
+        Me.bGenerarAlbaran.Name = "bGenerarAlbaran"
+        Me.bGenerarAlbaran.Size = New System.Drawing.Size(75, 28)
+        Me.bGenerarAlbaran.TabIndex = 228
+        Me.bGenerarAlbaran.Text = "Albaran"
+        Me.bGenerarAlbaran.Visible = False
         '
         'txtOServicioFind
         '
@@ -4270,7 +4282,7 @@ Public Class MntoAlquiler
         '
         'rbtMinimizarTree
         '
-        Me.rbtMinimizarTree.Location = New System.Drawing.Point(133, 18)
+        Me.rbtMinimizarTree.Location = New System.Drawing.Point(88, 19)
         Me.rbtMinimizarTree.Name = "rbtMinimizarTree"
         Me.rbtMinimizarTree.Size = New System.Drawing.Size(77, 15)
         Me.rbtMinimizarTree.TabIndex = 40
@@ -4278,7 +4290,7 @@ Public Class MntoAlquiler
         '
         'rbtMaximizarTree
         '
-        Me.rbtMaximizarTree.Location = New System.Drawing.Point(46, 18)
+        Me.rbtMaximizarTree.Location = New System.Drawing.Point(10, 18)
         Me.rbtMaximizarTree.Name = "rbtMaximizarTree"
         Me.rbtMaximizarTree.Size = New System.Drawing.Size(84, 16)
         Me.rbtMaximizarTree.TabIndex = 39
@@ -7883,4 +7895,93 @@ Public Class MntoAlquiler
             Next
         End If
     End Sub
+    'David Velasco 21/06/22 HILTI
+    Private Sub bGenerarAlbaran_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bGenerarAlbaran.Click
+        'Paso 1: Crea orden de Servicio(ya checkeado que no existe ese Excel)
+        creaOrdendeServicio()
+        'Paso 2: Inserccion del Excel
+    End Sub
+
+    Private Sub NuevaOrdenHilti(ByVal IDTrabajo As Integer, ByVal obra As ObraDatos)
+        If Length(Me.CurrentRow("IDTipoObra")) > 0 AndAlso Length(Me.CurrentRow("IDDireccion")) > 0 Then
+            Dim frm As New FrmAddOrden
+            Dim dr As DataRow = frm.AbrirAltaOrdenHilti(Me.CurrentRow("IDObra"), Me.CurrentRow("IDTipoObra"), AdvIDCliente.Text, ulDescCliente.Text, _
+                                                   Me.CurrentRow("IDDireccion"), txtDireccion.Text, txtPoblacion.Text, txtProvincia.Text, _
+                                                   txtCodPostal.Text, txtCifCliente.Text, "-", CurrentRow("TextoCliente") & String.Empty, _
+                                                   Nz(Me.CurrentRow("FianzaObligatoria"), False), IDTrabajo, Me.CurrentRow("IDCentroGestion") & String.Empty, obra)
+            IDTrabajo = 0
+
+            If Not IsNothing(dr) Then
+                dr("Secuencia") = (ndTrabajos.Data.Rows.Count + 1) * 10
+                ndTrabajos.Data.Rows.Add(dr.ItemArray)
+                Me.RecordsState = RecordsState.Modified
+                dtTrabajos = ndTrabajos.Data
+                RefreshArbolTrabajos()
+                FiltrarGridTrabajos()
+            End If
+        Else
+            ExpertisApp.GenerateMessage("El Tipo Alquiler y la dirección del Cliente son datos necesarios para poder dar de alta Ordenes.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
+    End Sub
+
+    Public Sub creaOrdendeServicio()
+        Dim obra As New ObraDatos
+        obra = compruebaExcel()
+
+        If obra.ruta.ToString.Length = 0 Then
+            MsgBox("Este Excel con este nombre y ubicacion ya ha sido insertado anteriormente.")
+        Else
+            NuevaOrdenHilti(0, obra)
+            blnRefreshArbol = True
+            Me.UpdateChanges()
+        End If
+
+    End Sub
+    Public Function compruebaExcel() As ObraDatos
+        'Paso 0: Checkear si el Excel existe
+        Dim obra As New ObraDatos
+
+        Dim openFD As New OpenFileDialog()
+        openFD.Title = "Seleccionar archivos"
+        openFD.Filter = "Archivos Excel(*.xls;*.xlsx)|*.xls;*xlsx|Todos los archivos(*.*)|*.*"
+        openFD.Multiselect = False
+        openFD.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.Desktop
+        If openFD.ShowDialog = Windows.Forms.DialogResult.OK Then
+            obra.ruta = openFD.FileName
+        End If
+        Dim filtro As New Filter
+        filtro.Add("nombreExcel", FilterOperator.Equal, obra.ruta)
+        Dim tb As New DataTable
+        tb = New BE.DataEngine().Filter("VFrmAlquilerTrabajos", filtro)
+
+        If tb.Rows.Count > 0 Then
+            obra.ruta = ""
+            Return obra
+        Else
+            'Recupero el Excel en tabla según formato
+            Dim hoja As String
+            Dim rango As String
+            hoja = "Hoja1"
+            rango = "A1:C100"
+            obra.dt.Columns.Add("IDArticulo")
+            obra.dt.Columns.Add("Cantidad")
+            obra.dt.Columns.Add("Almacen")
+            obra.dt = ObtenerDatosExcel(obra.ruta, hoja, rango)
+            Return obra
+        End If
+    End Function
+    Public Function ObtenerDatosExcel(ByVal ruta As String, ByVal hoja As String, ByVal rango As String) As DataTable
+        Dim MyConnection As System.Data.OleDb.OleDbConnection
+        Dim DtSet As System.Data.DataSet
+        Dim MyCommand As System.Data.OleDb.OleDbDataAdapter
+        MyConnection = New System.Data.OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source='" & ruta & "';Extended Properties=Excel 12.0;")
+        MyCommand = New System.Data.OleDb.OleDbDataAdapter("select * from [" & hoja & "$" & rango & "]", MyConnection)
+        'MyCommand.TableMappings.Add("Table", "Net-informations.com")
+        DtSet = New System.Data.DataSet
+        MyCommand.Fill(DtSet)
+        Dim dt As DataTable = DtSet.Tables(0)
+        MyConnection.Close()
+
+        Return dt
+    End Function
 End Class

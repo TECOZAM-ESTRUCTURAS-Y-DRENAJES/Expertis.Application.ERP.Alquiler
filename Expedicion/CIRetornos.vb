@@ -805,19 +805,23 @@ Public Class CIRetornos
     End Sub
 
     Private Sub LoadToolbarActions()
-        Me.FormActions.Add("Albarán Retorno", AddressOf ExpedirAlbaranRetorno, ExpertisApp.GetIcon("xAlbaranesVenta.ico"))
-        Me.FormActions.Add("Albarán Consumo", AddressOf ExpedirAlbaranConsumo, ExpertisApp.GetIcon("xAlbaranesVenta.ico"))
-        Me.AddSeparator()
-        Me.FormActions.Add("Traspaso de Material entre Alquileres", AddressOf TraspasoMaterial, ExpertisApp.GetIcon("gear_refresh.ico"))
-        Me.FormActions.Add("Sustitución de Activo Averiado", AddressOf CambioMaquina, ExpertisApp.GetIcon("gear_replace.ico"))
-        Me.AddSeparator()
-        Me.FormActions.Add("Recalcular Fechas de Retorno de Días Mínimos", AddressOf RecalcularFechaRetorno, ExpertisApp.GetIcon("clock_refresh.ico"))
-        'David Velasco 21/02/22
-        Me.AddSeparator()
-        Me.FormActions.Add("GENERAR VENCIMIENTOS", AddressOf TraspasoMaterialsin011, ExpertisApp.GetIcon("gear_replace.ico"))
-        'David Velasco 14/06/22
+        Me.FormActions.Add("1. Albarán Retorno", AddressOf ExpedirAlbaranRetorno, ExpertisApp.GetIcon("xAlbaranesVenta.ico"))
         'Me.AddSeparator()
+        'Esto era albarán de consumo
+        'Me.FormActions.Add("Albarán de consumo", AddressOf ExpedirAlbaranConsumo, ExpertisApp.GetIcon("xAmortContable.ico"))
+        'Me.AddSeparator()
+        'Me.FormActions.Add("Traspaso de Material entre Alquileres", AddressOf TraspasoMaterial, ExpertisApp.GetIcon("gear_refresh.ico"))
+        'Me.FormActions.Add("Sustitución de Activo Averiado", AddressOf CambioMaquina, ExpertisApp.GetIcon("gear_replace.ico"))
+        'Me.AddSeparator()
+        'Me.FormActions.Add("Recalcular Fechas de Retorno de Días Mínimos", AddressOf RecalcularFechaRetorno, ExpertisApp.GetIcon("clock_refresh.ico"))
+        'David Velasco 21/02/22
+        Me.FormActions.Add("2. Liquidar con Movimiento de Salida.", AddressOf LiquidacionConMovimiento, ExpertisApp.GetIcon("gear_replace.ico"))
+        'Me.AddSeparator()
+        Me.FormActions.Add("3. Transferencia entre almacenes.", AddressOf TraspasoMaterialsin0112, ExpertisApp.GetIcon("exchange.ico"))
         'Me.FormActions.Add("GENERAR VENCIMIENTOS BUENO", AddressOf TraspasoMaterialsin011Bueno, ExpertisApp.GetIcon("gear_replace.ico"))
+        Me.AddSeparator()
+        Me.FormActions.Add("Liquidar sin Movimiento de Salida. Borrar.", AddressOf LiquidacionSinMovimiento, ExpertisApp.GetIcon("delete2.ico"))
+
 
     End Sub
     'David Velasco 21/02
@@ -934,7 +938,7 @@ Public Class CIRetornos
                                                 datosAct.Retornos = False
 
                                                 Dim rslt As ResultAlbaranAlquiler = New BE.DataEngine().RunProcess(GetType(PrcActualizarAlbaranAlquilerSinStock), datosAct)
-                                                MsgBox("Se ha generado el vencimiento correctamente.", MsgBoxStyle.OkOnly)
+                                                'MsgBox("Se ha generado el vencimiento correctamente.", MsgBoxStyle.OkOnly)
                                                 Me.Cursor = Cursors.Default
                                                 '2ª PARTE- hacer el movimiento de un almacen a otro.
                                                 'If blnTraspaso Then
@@ -1243,9 +1247,480 @@ Public Class CIRetornos
     Private Sub TraspasoMaterial()
         Expedir(enumTipoExpedicion.Consumo, True)
     End Sub
-    'David Velasco 21/02
-    Private Sub TraspasoMaterialsin011()
-        Expedir(enumTipoExpedicion.Transferencia, False)
+    'David Velasco 03/08/22
+    Private Sub TraspasoMaterialsin0112()
+        Expedir2(enumTipoExpedicion.Transferencia, True)
+    End Sub
+    Protected Function GenerarTraspaso2(ByVal datosTraspaso As TraspasoMaquina.dataTraspasoMaquina) As ResultAlbaranAlquiler
+        If datosTraspaso.IDObraDestino > 0 Then
+            If Not IsNothing(datosTraspaso.dtObraMaterial) AndAlso datosTraspaso.dtObraMaterial.Rows.Count > 0 Then
+                Dim dtOT As DataTable = ExpertisApp.ExecuteTask(Of TraspasoMaquina.dataTraspasoMaquina, DataTable)(AddressOf TraspasoMaquina.GenerarTraspasoMaquina2, datosTraspaso)
+                If Not IsNothing(dtOT) AndAlso dtOT.Rows.Count > 0 Then
+                    Return GenerarAlbaranDesdeTraspaso(datosTraspaso, dtOT)
+                End If
+            End If
+        End If
+
+        Return Nothing
+    End Function
+
+    Protected Overridable Sub Expedir2(ByVal tipo As enumTipoExpedicion, Optional ByVal blnTraspaso As Boolean = False)
+        If Length(mIDOperario) > 0 Then
+            If Length(AdvContador.Text) > 0 Then
+                Dim dtMarcados As DataTable = Me.CheckedRecords
+                If dtMarcados Is Nothing OrElse dtMarcados.Rows.Count = 0 Then
+                    ExpertisApp.GenerateMessage("No se han seleccionado líneas.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Else
+                    Dim blnCancel As Boolean = False
+                    Dim TraspasoInfo As New TraspasoMaquina.dataTraspasoMaquina
+                    If blnTraspaso Then
+                        TraspasoInfo = TratarTraspasoMaterial(dtMarcados.Copy)
+                        blnCancel = TraspasoInfo Is Nothing
+                    End If
+                    If Not blnCancel Then blnCancel = ValidaDatosAExpedir(dtMarcados, , tipo = enumTipoExpedicion.Retorno)
+                    If Not blnCancel AndAlso dtMarcados.Rows.Count > 0 Then
+                        Dim p As New Parametro
+                        Dim IDTipoAlbaran As String = String.Empty
+                        Select Case tipo
+                            Case enumTipoExpedicion.Transferencia
+                                IDTipoAlbaran = p.TipoAlbaranRetornoAlquiler
+                                Dim frm As New frmCondicionesAlquilerMasiva
+                                frm.AbrirCondicionesAlquiler(dtMarcados.Copy)
+                                Dim frmAC3 As New frmDatosAuxExpedicion
+                                Dim d3 As frmDatosAuxExpedicion.DatosContadorConductor
+                                d3 = frmAC3.AbrirFormulario(dtMarcados.Copy, False, True, tipo = enumTipoExpedicion.Consumo, , blnTraspaso)
+                                If d3.Ok = DialogResult.OK Then
+                                    Dim dtContadores As DataTable = d3.dtContadores
+
+                                    Dim aExpedir() As CrearAlbaranVentaInfo = DatosAExpedir(dtMarcados, blnTraspaso, TraspasoInfo.FechaRetorno, _
+                                                                                            TraspasoInfo.HoraRetorno, , d3.dtEstadoActivo)
+                                    Me.Cursor = Cursors.WaitCursor
+
+                                    Dim data As New DataPrcAlbaranar(aExpedir, AdvContador.Text, , IDTipoAlbaran, Business.BusinessEnum.enumTipoExpedicion.teAlquiler)
+                                    Dim Propuesta As ResultAlbaranAlquiler = New BE.DataEngine().RunProcess(GetType(PrcAlbaranarAlquiler), data)
+                                    If Not IsNothing(Propuesta) Then
+                                        If Not Propuesta.PropuestaAlbaranes Is Nothing AndAlso Propuesta.PropuestaAlbaranes.Rows.Count > 0 Then
+                                            Dim frm2 As New frmAlbaranProvisional
+                                            Dim dr As DialogResult = frm2.AbrirFormulario(Propuesta.PropuestaAlbaranes)
+                                            If dr = DialogResult.OK Then
+                                                Me.Cursor = Cursors.WaitCursor
+                                                Dim datosAct As New dataPrcActualizarAlbaranAlquiler(Propuesta)
+                                                datosAct.Contadores = dtContadores
+                                                datosAct.Avisos = dtMarcados.Copy
+                                                datosAct.Retornos = False
+
+                                                Dim rslt As ResultAlbaranAlquiler = New BE.DataEngine().RunProcess(GetType(PrcActualizarAlbaranAlquilerSinStock), datosAct)
+                                                'MsgBox("Se ha generado el vencimiento correctamente.", MsgBoxStyle.OkOnly)
+                                                Me.Cursor = Cursors.Default
+
+                                                'CREACIÓN DE LA ORDEN DE SERVICIO
+                                                'David Velasco 04/08/22
+                                                TraspasoInfo.dtRetornos = dtMarcados
+                                                Dim rsltTraspaso As ResultAlbaranAlquiler = GenerarTraspaso2(TraspasoInfo)
+                                                rslt = UnirResults(rslt, rsltTraspaso)
+
+                                                Dim frmStock As New DetalleActualizacionStock
+                                                frmStock.DataSource = rslt.StockUpdateData
+                                                frmStock.ShowDialog()
+                                            Else
+                                                ExpertisApp.GenerateMessage("Proceso cancelado.", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                            End If
+                                        Else
+                                            TratarLog(Propuesta.CreateData, enumTipoDocumentoCreado.AlbaranVentaAlquiler, True, True)
+                                        End If
+                                            Grid.UnCheckAllRecords()
+                                            Me.Execute()
+                                            Me.Cursor = Cursors.Default
+                                        Else
+                                            ExpertisApp.GenerateMessage("No se ha podido generar el Albarán.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                                        End If
+                                        Exit Sub
+                                    End If
+                        End Select
+
+                        
+                    ElseIf dtMarcados.Rows.Count = 0 Then
+                        ExpertisApp.GenerateMessage("No hay líneas que cumplan las condiciones anteriormente mencionadas.", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Else
+                        ExpertisApp.GenerateMessage("Proceso cancelado.", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    End If
+                End If
+            Else
+                ExpertisApp.GenerateMessage("El Contador es un dato obligatorio.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            End If
+        Else
+            ExpertisApp.GenerateMessage("Proceso cancelado. Es necesario asignar un Operario al Usuario.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
+    End Sub
+
+    'Fin David
+    'David Velasco 21/02/22 - LIQUIDACIONES CON O SIN MOVIMIENTO
+    Private Sub LiquidacionConMovimiento()
+        ExpedirConMovimiento(enumTipoExpedicion.Transferencia, False)
+    End Sub
+
+    Protected Overridable Sub ExpedirConMovimiento(ByVal tipo As enumTipoExpedicion, Optional ByVal blnTraspaso As Boolean = False)
+        If Length(mIDOperario) > 0 Then
+            If Length(AdvContador.Text) > 0 Then
+                Dim dtMarcados As DataTable = Me.CheckedRecords
+                If dtMarcados Is Nothing OrElse dtMarcados.Rows.Count = 0 Then
+                    ExpertisApp.GenerateMessage("No se han seleccionado líneas.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Else
+                    'If Me.RecordsState = RecordsState.Modified Then Me.UpdateData()
+
+                    'If ValidaFianzasObligatorias(dtMarcados.Copy) = 0 Then
+                    Dim blnCancel As Boolean = False
+                    Dim TraspasoInfo As New TraspasoMaquina.dataTraspasoMaquina
+                    If blnTraspaso Then
+                        TraspasoInfo = TratarTraspasoMaterial(dtMarcados.Copy)
+                        blnCancel = TraspasoInfo Is Nothing
+                    End If
+                    'David Velasco 14/6/22
+                    If Not blnCancel Then blnCancel = ValidaDatosAExpedir(dtMarcados, , tipo = enumTipoExpedicion.Retorno)
+                    If Not blnCancel AndAlso dtMarcados.Rows.Count > 0 Then
+                        Dim p As New Parametro
+                        Dim IDTipoAlbaran As String = String.Empty
+                        Select Case tipo
+                            Case enumTipoExpedicion.Consumo
+                                IDTipoAlbaran = p.TipoAlbaranDeConsumo
+                                If blnTraspaso Then
+                                    IDTipoAlbaran = p.TipoAlbaranRetornoAlquiler
+                                End If
+                            Case enumTipoExpedicion.Retorno
+                                IDTipoAlbaran = p.TipoAlbaranRetornoAlquiler
+                                Dim frm As New frmCondicionesAlquilerMasiva
+                                frm.AbrirCondicionesAlquiler(dtMarcados.Copy)
+                            Case enumTipoExpedicion.Transferencia
+                                IDTipoAlbaran = p.TipoAlbaranRetornoAlquiler
+                                Dim frm As New frmCondicionesAlquilerMasiva
+                                frm.AbrirCondicionesAlquiler(dtMarcados.Copy)
+                                Dim frmAC3 As New frmDatosAuxExpedicion
+                                Dim d3 As frmDatosAuxExpedicion.DatosContadorConductor
+                                d3 = frmAC3.AbrirFormulario(dtMarcados.Copy, False, True, tipo = enumTipoExpedicion.Consumo, , blnTraspaso)
+                                If d3.Ok = DialogResult.OK Then
+                                    Dim dtContadores As DataTable = d3.dtContadores
+
+                                    Dim aExpedir() As CrearAlbaranVentaInfo = DatosAExpedir(dtMarcados, blnTraspaso, TraspasoInfo.FechaRetorno, _
+                                                                                            TraspasoInfo.HoraRetorno, , d3.dtEstadoActivo)
+                                    Me.Cursor = Cursors.WaitCursor
+
+                                    Dim data As New DataPrcAlbaranar(aExpedir, AdvContador.Text, , IDTipoAlbaran, Business.BusinessEnum.enumTipoExpedicion.teAlquiler)
+                                    Dim Propuesta As ResultAlbaranAlquiler = New BE.DataEngine().RunProcess(GetType(PrcAlbaranarAlquiler), data)
+                                    If Not IsNothing(Propuesta) Then
+                                        If Not Propuesta.PropuestaAlbaranes Is Nothing AndAlso Propuesta.PropuestaAlbaranes.Rows.Count > 0 Then
+                                            Dim frm2 As New frmAlbaranProvisional
+                                            Dim dr As DialogResult = frm2.AbrirFormulario(Propuesta.PropuestaAlbaranes)
+                                            If dr = DialogResult.OK Then
+                                                Me.Cursor = Cursors.WaitCursor
+                                                Dim datosAct As New dataPrcActualizarAlbaranAlquiler(Propuesta)
+                                                datosAct.Contadores = dtContadores
+                                                datosAct.Avisos = dtMarcados.Copy
+                                                datosAct.Retornos = False
+
+                                                Dim rslt As ResultAlbaranAlquiler = New BE.DataEngine().RunProcess(GetType(PrcActualizarAlbaranAlquilerLiquidar), datosAct)
+                                                'MsgBox("Se ha generado el vencimiento correctamente.", MsgBoxStyle.OkOnly)
+                                                Me.Cursor = Cursors.Default
+                                                '2ª PARTE- hacer el movimiento de un almacen a otro.
+                                                'If blnTraspaso Then
+                                                'TraspasoInfo.dtRetornos = dtMarcados
+                                                'Dim rsltTraspaso As ResultAlbaranAlquiler = GenerarTraspaso(TraspasoInfo)
+                                                'rslt = UnirResults(rslt, rsltTraspaso)
+                                                'ElseIf Not rslt.StockUpdateData Is Nothing AndAlso rslt.StockUpdateData.Length > 0 Then
+                                                Dim frmStock As New DetalleActualizacionStock
+                                                frmStock.DataSource = rslt.StockUpdateData
+                                                frmStock.ShowDialog()
+                                                'End If
+                                            Else
+                                                ExpertisApp.GenerateMessage("Proceso cancelado.", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                            End If
+                                        Else
+                                            TratarLog(Propuesta.CreateData, enumTipoDocumentoCreado.AlbaranVentaAlquiler, True, True)
+                                        End If
+                                        Grid.UnCheckAllRecords()
+                                        Me.Execute()
+                                        Me.Cursor = Cursors.Default
+                                    Else
+                                        ExpertisApp.GenerateMessage("No se ha podido generar el Albarán.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                                    End If
+                                    Exit Sub
+                                End If
+                        End Select
+
+                        'Dim frmAC As New frmDatosAuxExpedicion
+                        'Dim d As frmDatosAuxExpedicion.DatosContadorConductor
+                        'd = frmAC.AbrirFormulario(dtMarcados.Copy, False, True, tipo = enumTipoExpedicion.Consumo, , blnTraspaso)
+                        'If d.Ok = DialogResult.OK Then
+                        '    Dim dtContadores As DataTable = d.dtContadores
+
+                        '    Dim aExpedir() As CrearAlbaranVentaInfo = DatosAExpedir(dtMarcados, blnTraspaso, TraspasoInfo.FechaRetorno, _
+                        '                                                            TraspasoInfo.HoraRetorno, , d.dtEstadoActivo)
+                        '    Me.Cursor = Cursors.WaitCursor
+
+                        '    Dim data As New DataPrcAlbaranar(aExpedir, AdvContador.Text, , IDTipoAlbaran, Business.BusinessEnum.enumTipoExpedicion.teAlquiler)
+                        '    Dim Propuesta As ResultAlbaranAlquiler = New BE.DataEngine().RunProcess(GetType(PrcAlbaranarAlquiler), data)
+                        '    If Not IsNothing(Propuesta) Then
+                        '        If Not Propuesta.PropuestaAlbaranes Is Nothing AndAlso Propuesta.PropuestaAlbaranes.Rows.Count > 0 Then
+                        '            Dim frm As New frmAlbaranProvisional
+                        '            Dim dr As DialogResult = frm.AbrirFormulario(Propuesta.PropuestaAlbaranes)
+                        '            If dr = DialogResult.OK Then
+                        '                Me.Cursor = Cursors.WaitCursor
+                        '                Dim datosAct As New dataPrcActualizarAlbaranAlquiler(Propuesta)
+                        '                datosAct.Contadores = dtContadores
+                        '                datosAct.Avisos = dtMarcados.Copy
+                        '                datosAct.Retornos = True
+
+                        '                Dim rslt As ResultAlbaranAlquiler = New BE.DataEngine().RunProcess(GetType(PrcActualizarAlbaranAlquiler), datosAct)
+
+                        '                If blnTraspaso Then
+                        '                    TraspasoInfo.dtRetornos = dtMarcados
+                        '                    Dim rsltTraspaso As ResultAlbaranAlquiler = GenerarTraspaso(TraspasoInfo)
+                        '                    rslt = UnirResults(rslt, rsltTraspaso)
+                        '                ElseIf Not rslt.StockUpdateData Is Nothing AndAlso rslt.StockUpdateData.Length > 0 Then
+                        '                    Dim frmStock As New DetalleActualizacionStock
+                        '                    frmStock.DataSource = rslt.StockUpdateData
+                        '                    frmStock.ShowDialog()
+                        '                End If
+
+                        '                Me.UnCheckAllRecords()
+
+                        '                Dim Albaranes() As Integer = AlbaranesGenerados(rslt.CreateData)
+                        '                Dim IDAlbaran(Albaranes.Length - 1) As Object
+                        '                Albaranes.CopyTo(IDAlbaran, 0)
+
+                        '                Dim AbrirAlbaran As Boolean = True
+
+                        '                Dim dtOT As DataTable = New MntoOT().Filter(New InListFilterItem("IDAlbaranRetorno", IDAlbaran, FilterType.Numeric), , "IDOT,NROT")
+                        '                If Not dtOT Is Nothing AndAlso dtOT.Rows.Count > 0 Then
+                        '                    Dim NROTs As String = String.Empty
+                        '                    Dim IDOT As Integer = dtOT.Rows(0)("IDOT")
+                        '                    For Each drOT As DataRow In dtOT.Rows
+                        '                        If Len(NROTs) > 0 Then NROTs = NROTs & " ,"
+                        '                        NROTs = NROTs & drOT("NROT")
+                        '                    Next
+
+                        '                    Dim NAlbaranes As String = ListadoAlbaranesGenerados(rslt.CreateData)
+                        '                    If ExpertisApp.GenerateMessage("Se han generado las Ordenes de Trabajo: |.|Se han generado los Albaranes : |.|¿Desea abrir el mantenimiento de las Ordenes de Trabajo?,", MessageBoxButtons.YesNo, MessageBoxIcon.Information, NROTs, vbNewLine, NAlbaranes, vbNewLine) = DialogResult.Yes Then
+                        '                        AbrirAlbaran = False
+                        '                        ExpertisApp.OpenForm("MNTOOT", New NumberFilterItem("IDOT", IDOT))
+                        '                    End If
+                        '                End If
+                        '                If AbrirAlbaran Then
+                        '                    TratarLog(rslt.CreateData, enumTipoDocumentoCreado.AlbaranVentaAlquiler, True, True)
+                        '                End If
+
+                        '                Me.Cursor = Cursors.Default
+                        '            Else
+                        '                ExpertisApp.GenerateMessage("Proceso cancelado.", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        '            End If
+                        '        Else
+                        '            TratarLog(Propuesta.CreateData, enumTipoDocumentoCreado.AlbaranVentaAlquiler, True, True)
+                        '        End If
+                        '        Grid.UnCheckAllRecords()
+                        '        Me.Execute()
+                        '    Else
+                        '        ExpertisApp.GenerateMessage("No se ha podido generar el Albarán.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        '    End If
+                        'End If
+                    ElseIf dtMarcados.Rows.Count = 0 Then
+                        ExpertisApp.GenerateMessage("No hay líneas que cumplan las condiciones anteriormente mencionadas.", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Else
+                        ExpertisApp.GenerateMessage("Proceso cancelado.", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    End If
+                    '    Else
+                    '    Dim frm As New frmOrdenesSinContabilizar
+                    '    frm.AbrirOrdenesSinContabilizar(dtMarcados)
+                    'End If
+                End If
+            Else
+                ExpertisApp.GenerateMessage("El Contador es un dato obligatorio.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            End If
+        Else
+            ExpertisApp.GenerateMessage("Proceso cancelado. Es necesario asignar un Operario al Usuario.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
+    End Sub
+
+    Private Sub LiquidacionSinMovimiento()
+        Expedir4(enumTipoExpedicion.Transferencia, False)
+    End Sub
+
+    Protected Overridable Sub Expedir4(ByVal tipo As enumTipoExpedicion, Optional ByVal blnTraspaso As Boolean = False)
+        If Length(mIDOperario) > 0 Then
+            If Length(AdvContador.Text) > 0 Then
+                Dim dtMarcados As DataTable = Me.CheckedRecords
+                If dtMarcados Is Nothing OrElse dtMarcados.Rows.Count = 0 Then
+                    ExpertisApp.GenerateMessage("No se han seleccionado líneas.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Else
+                    'If Me.RecordsState = RecordsState.Modified Then Me.UpdateData()
+
+                    'If ValidaFianzasObligatorias(dtMarcados.Copy) = 0 Then
+                    Dim blnCancel As Boolean = False
+                    Dim TraspasoInfo As New TraspasoMaquina.dataTraspasoMaquina
+                    If blnTraspaso Then
+                        TraspasoInfo = TratarTraspasoMaterial(dtMarcados.Copy)
+                        blnCancel = TraspasoInfo Is Nothing
+                    End If
+                    'David Velasco 14/6/22
+                    If Not blnCancel Then blnCancel = ValidaDatosAExpedir(dtMarcados, , tipo = enumTipoExpedicion.Retorno)
+                    If Not blnCancel AndAlso dtMarcados.Rows.Count > 0 Then
+                        Dim p As New Parametro
+                        Dim IDTipoAlbaran As String = String.Empty
+                        Select Case tipo
+                            Case enumTipoExpedicion.Consumo
+                                IDTipoAlbaran = p.TipoAlbaranDeConsumo
+                                If blnTraspaso Then
+                                    IDTipoAlbaran = p.TipoAlbaranRetornoAlquiler
+                                End If
+                            Case enumTipoExpedicion.Retorno
+                                IDTipoAlbaran = p.TipoAlbaranRetornoAlquiler
+                                Dim frm As New frmCondicionesAlquilerMasiva
+                                frm.AbrirCondicionesAlquiler(dtMarcados.Copy)
+                            Case enumTipoExpedicion.Transferencia
+                                IDTipoAlbaran = p.TipoAlbaranRetornoAlquiler
+                                Dim frm As New frmCondicionesAlquilerMasiva
+                                frm.AbrirCondicionesAlquiler(dtMarcados.Copy)
+                                Dim frmAC3 As New frmDatosAuxExpedicion
+                                Dim d3 As frmDatosAuxExpedicion.DatosContadorConductor
+                                d3 = frmAC3.AbrirFormulario(dtMarcados.Copy, False, True, tipo = enumTipoExpedicion.Consumo, , blnTraspaso)
+                                If d3.Ok = DialogResult.OK Then
+                                    Dim dtContadores As DataTable = d3.dtContadores
+
+                                    Dim aExpedir() As CrearAlbaranVentaInfo = DatosAExpedir(dtMarcados, blnTraspaso, TraspasoInfo.FechaRetorno, _
+                                                                                            TraspasoInfo.HoraRetorno, , d3.dtEstadoActivo)
+                                    Me.Cursor = Cursors.WaitCursor
+
+                                    Dim data As New DataPrcAlbaranar(aExpedir, AdvContador.Text, , IDTipoAlbaran, Business.BusinessEnum.enumTipoExpedicion.teAlquiler)
+                                    Dim Propuesta As ResultAlbaranAlquiler = New BE.DataEngine().RunProcess(GetType(PrcAlbaranarAlquiler), data)
+                                    If Not IsNothing(Propuesta) Then
+                                        If Not Propuesta.PropuestaAlbaranes Is Nothing AndAlso Propuesta.PropuestaAlbaranes.Rows.Count > 0 Then
+                                            Dim frm2 As New frmAlbaranProvisional
+                                            Dim dr As DialogResult = frm2.AbrirFormulario(Propuesta.PropuestaAlbaranes)
+                                            If dr = DialogResult.OK Then
+                                                Me.Cursor = Cursors.WaitCursor
+                                                Dim datosAct As New dataPrcActualizarAlbaranAlquiler(Propuesta)
+                                                datosAct.Contadores = dtContadores
+                                                datosAct.Avisos = dtMarcados.Copy
+                                                datosAct.Retornos = False
+
+                                                Dim rslt As ResultAlbaranAlquiler = New BE.DataEngine().RunProcess(GetType(PrcActualizarAlbaranAlquilerSinStock), datosAct)
+                                                MsgBox("Se ha generado el vencimiento correctamente.", MsgBoxStyle.OkOnly)
+                                                Me.Cursor = Cursors.Default
+                                                '2ª PARTE- hacer el movimiento de un almacen a otro.
+                                                'If blnTraspaso Then
+                                                '    TraspasoInfo.dtRetornos = dtMarcados
+                                                '    Dim rsltTraspaso As ResultAlbaranAlquiler = GenerarTraspaso(TraspasoInfo)
+                                                '    rslt = UnirResults(rslt, rsltTraspaso)
+                                                'ElseIf Not rslt.StockUpdateData Is Nothing AndAlso rslt.StockUpdateData.Length > 0 Then
+                                                '    Dim frmStock As New DetalleActualizacionStock
+                                                '    frmStock.DataSource = rslt.StockUpdateData
+                                                '    frmStock.ShowDialog()
+                                                'End If
+                                            Else
+                                                ExpertisApp.GenerateMessage("Proceso cancelado.", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                            End If
+                                        Else
+                                            TratarLog(Propuesta.CreateData, enumTipoDocumentoCreado.AlbaranVentaAlquiler, True, True)
+                                        End If
+                                        Grid.UnCheckAllRecords()
+                                        Me.Execute()
+                                        Me.Cursor = Cursors.Default
+                                    Else
+                                        ExpertisApp.GenerateMessage("No se ha podido generar el Albarán.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                                    End If
+                                    Exit Sub
+                                End If
+                        End Select
+
+                        Dim frmAC As New frmDatosAuxExpedicion
+                        Dim d As frmDatosAuxExpedicion.DatosContadorConductor
+                        d = frmAC.AbrirFormulario(dtMarcados.Copy, False, True, tipo = enumTipoExpedicion.Consumo, , blnTraspaso)
+                        If d.Ok = DialogResult.OK Then
+                            Dim dtContadores As DataTable = d.dtContadores
+
+                            Dim aExpedir() As CrearAlbaranVentaInfo = DatosAExpedir(dtMarcados, blnTraspaso, TraspasoInfo.FechaRetorno, _
+                                                                                    TraspasoInfo.HoraRetorno, , d.dtEstadoActivo)
+                            Me.Cursor = Cursors.WaitCursor
+
+                            Dim data As New DataPrcAlbaranar(aExpedir, AdvContador.Text, , IDTipoAlbaran, Business.BusinessEnum.enumTipoExpedicion.teAlquiler)
+                            Dim Propuesta As ResultAlbaranAlquiler = New BE.DataEngine().RunProcess(GetType(PrcAlbaranarAlquiler), data)
+                            If Not IsNothing(Propuesta) Then
+                                If Not Propuesta.PropuestaAlbaranes Is Nothing AndAlso Propuesta.PropuestaAlbaranes.Rows.Count > 0 Then
+                                    Dim frm As New frmAlbaranProvisional
+                                    Dim dr As DialogResult = frm.AbrirFormulario(Propuesta.PropuestaAlbaranes)
+                                    If dr = DialogResult.OK Then
+                                        Me.Cursor = Cursors.WaitCursor
+                                        Dim datosAct As New dataPrcActualizarAlbaranAlquiler(Propuesta)
+                                        datosAct.Contadores = dtContadores
+                                        datosAct.Avisos = dtMarcados.Copy
+                                        datosAct.Retornos = True
+
+                                        Dim rslt As ResultAlbaranAlquiler = New BE.DataEngine().RunProcess(GetType(PrcActualizarAlbaranAlquiler), datosAct)
+
+                                        If blnTraspaso Then
+                                            TraspasoInfo.dtRetornos = dtMarcados
+                                            Dim rsltTraspaso As ResultAlbaranAlquiler = GenerarTraspaso(TraspasoInfo)
+                                            rslt = UnirResults(rslt, rsltTraspaso)
+                                        ElseIf Not rslt.StockUpdateData Is Nothing AndAlso rslt.StockUpdateData.Length > 0 Then
+                                            Dim frmStock As New DetalleActualizacionStock
+                                            frmStock.DataSource = rslt.StockUpdateData
+                                            frmStock.ShowDialog()
+                                        End If
+
+                                        Me.UnCheckAllRecords()
+
+                                        Dim Albaranes() As Integer = AlbaranesGenerados(rslt.CreateData)
+                                        Dim IDAlbaran(Albaranes.Length - 1) As Object
+                                        Albaranes.CopyTo(IDAlbaran, 0)
+
+                                        Dim AbrirAlbaran As Boolean = True
+
+                                        Dim dtOT As DataTable = New MntoOT().Filter(New InListFilterItem("IDAlbaranRetorno", IDAlbaran, FilterType.Numeric), , "IDOT,NROT")
+                                        If Not dtOT Is Nothing AndAlso dtOT.Rows.Count > 0 Then
+                                            Dim NROTs As String = String.Empty
+                                            Dim IDOT As Integer = dtOT.Rows(0)("IDOT")
+                                            For Each drOT As DataRow In dtOT.Rows
+                                                If Len(NROTs) > 0 Then NROTs = NROTs & " ,"
+                                                NROTs = NROTs & drOT("NROT")
+                                            Next
+
+                                            Dim NAlbaranes As String = ListadoAlbaranesGenerados(rslt.CreateData)
+                                            If ExpertisApp.GenerateMessage("Se han generado las Ordenes de Trabajo: |.|Se han generado los Albaranes : |.|¿Desea abrir el mantenimiento de las Ordenes de Trabajo?,", MessageBoxButtons.YesNo, MessageBoxIcon.Information, NROTs, vbNewLine, NAlbaranes, vbNewLine) = DialogResult.Yes Then
+                                                AbrirAlbaran = False
+                                                ExpertisApp.OpenForm("MNTOOT", New NumberFilterItem("IDOT", IDOT))
+                                            End If
+                                        End If
+                                        If AbrirAlbaran Then
+                                            TratarLog(rslt.CreateData, enumTipoDocumentoCreado.AlbaranVentaAlquiler, True, True)
+                                        End If
+
+                                        Me.Cursor = Cursors.Default
+                                    Else
+                                        ExpertisApp.GenerateMessage("Proceso cancelado.", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                    End If
+                                Else
+                                    TratarLog(Propuesta.CreateData, enumTipoDocumentoCreado.AlbaranVentaAlquiler, True, True)
+                                End If
+                                Grid.UnCheckAllRecords()
+                                Me.Execute()
+                            Else
+                                ExpertisApp.GenerateMessage("No se ha podido generar el Albarán.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                            End If
+                        End If
+                    ElseIf dtMarcados.Rows.Count = 0 Then
+                        ExpertisApp.GenerateMessage("No hay líneas que cumplan las condiciones anteriormente mencionadas.", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Else
+                        ExpertisApp.GenerateMessage("Proceso cancelado.", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    End If
+                    '    Else
+                    '    Dim frm As New frmOrdenesSinContabilizar
+                    '    frm.AbrirOrdenesSinContabilizar(dtMarcados)
+                    'End If
+                End If
+            Else
+                ExpertisApp.GenerateMessage("El Contador es un dato obligatorio.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            End If
+        Else
+            ExpertisApp.GenerateMessage("Proceso cancelado. Es necesario asignar un Operario al Usuario.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
     End Sub
     'Fin David
 
@@ -1307,9 +1782,10 @@ Public Class CIRetornos
 
     Private Function DatosAExpedirTraspaso(ByRef dtMarcados As DataTable, ByVal dtmFecha As Date, ByVal strHora As String) As CrearAlbaranVentaInfo()
         Dim aExpedir(-1) As CrearAlbaranVentaInfo
-        Dim datosExp As New CrearAlbaranVentaInfo
+
 
         For Each drMarcados As DataRow In dtMarcados.Select
+            Dim datosExp As New CrearAlbaranVentaInfo
             datosExp.IDLinea = drMarcados("IDLineaMaterial")
             datosExp.IDLineaMaterial = drMarcados("IDLineaMaterial")
             datosExp.Cantidad = drMarcados("QAlbaran")

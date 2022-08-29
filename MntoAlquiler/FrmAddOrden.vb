@@ -1,3 +1,5 @@
+Imports Solmicro.Expertis.Business.Negocio
+
 Public Class FrmAddOrden
     Inherits Solmicro.Expertis.Engine.UI.FormBase
 
@@ -597,6 +599,24 @@ Public Class FrmAddOrden
             Return Nothing
         End If
     End Function
+    Public Function AbrirAltaOrdenHilti(ByVal IDObra As Integer, ByVal IDTipoObra As String, ByVal IDCliente As String, ByVal DescCliente As String, _
+                               ByVal IDDireccion As Integer, ByVal Direccion As String, ByVal Poblacion As String, ByVal Provincia As String, _
+                               ByVal CodPostal As String, ByVal CIF As String, ByVal PedidoClienteAbierto As String, ByVal TextoCliente As String, _
+                               ByVal FianzaObligatoria As Boolean, ByVal IDTrabajoPadre As Integer, ByVal IDCentroGestion As String, ByVal odatos As ObraDatos) As DataRow
+
+
+        mIDObra = IDObra
+        mIDTrabajoPadre = IDTrabajoPadre
+        mIDTipoObra = IDTipoObra
+        mIDDireccion = IDDireccion
+        mFianzaObligatoria = FianzaObligatoria
+        mPedidoClienteAbierto = PedidoClienteAbierto
+        mIDCentroGestion = IDCentroGestion
+        falsoLoad(odatos)
+
+        Return SetTrabajo()
+
+    End Function
 
     Private Sub LoadAdvancedSearchSettings()
         sctClienteDireccion = New AdvancedSearch : sctClienteDireccion.EntityName = "ClienteDireccion" : sctClienteDireccion.ViewName = "tbClienteDireccion"
@@ -648,8 +668,39 @@ Public Class FrmAddOrden
         End If
 
         If mIDTrabajoPadre > 0 Then Me.CurrentData.Rows(0)("IDTrabajoPadre") = mIDTrabajoPadre
-    End Sub
 
+    End Sub
+    Public Sub falsoLoad(ByVal odatos As ObraDatos)
+        Me.AddNew()
+
+        Dim dt As DataTable = ExpertisApp.ExecuteTask(Of DataTable, DataTable)(AddressOf ObraTrabajo.AddNewFormAlquileres, Me.CurrentData)
+        If Not IsNothing(dt) AndAlso dt.Rows.Count > 0 Then
+            For Each col As DataColumn In dt.Columns
+                If col.ColumnName <> "IDTrabajo" Then
+                    Me.CurrentData.Rows(0)(col.ColumnName) = dt.Rows(0)(col.ColumnName)
+                End If
+            Next
+        End If
+
+        chkFianzaObligatoria.Checked = mFianzaObligatoria
+
+        Me.CurrentData.Rows(0)("IDObra") = mIDObra
+        Me.CurrentData.Rows(0)("nombreExcel") = odatos.ruta
+        Me.CurrentData.Rows(0)("PedidoCliente") = "-"
+        Me.CurrentData.Rows(0)("IDTipoObra") = mIDTipoObra
+        Me.CurrentData.Rows(0)("IDDireccion") = mIDDireccion
+        Me.CurrentData.Rows(0)("TipoFacturacion") = CInt(enumotTipoFacturacion.otfPorConceptos)
+        If Length(Me.CurrentData.Rows(0)("IDCentroGestion")) = 0 AndAlso Length(mIDCentroGestion) > 0 Then
+            Me.CurrentData.Rows(0)("IDCentroGestion") = mIDCentroGestion
+        End If
+        If Length(mPedidoClienteAbierto) > 0 Then
+            txtPedidoCliente.Text = mPedidoClienteAbierto
+            txtPedidoCliente.ReadOnly = True
+        End If
+
+        If mIDTrabajoPadre > 0 Then Me.CurrentData.Rows(0)("IDTrabajoPadre") = mIDTrabajoPadre
+
+    End Sub
 #End Region
 
     Private Sub CmbAceptar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CmbAceptar.Click
@@ -696,7 +747,7 @@ Public Class FrmAddOrden
 
     Private Sub sctClienteDireccion_SetPredefinedFilter(ByVal sender As Object, ByVal e As Engine.UI.AdvSearchFilterEventArgs) Handles sctClienteDireccion.SetPredefinedFilter
         e.Filter.Add(New NumberFilterItem("IDObra", mIDObra))
-        If length(AdvCliente.Text) > 0 Then
+        If Length(AdvCliente.Text) > 0 Then
             e.Filter.Add(New StringFilterItem("IDCliente", AdvCliente.Text))
         End If
     End Sub
@@ -709,4 +760,7 @@ Public Class FrmAddOrden
 
 #End Region
 
+    Private Sub ulDescClienteOT_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ulDescClienteOT.Click
+
+    End Sub
 End Class
