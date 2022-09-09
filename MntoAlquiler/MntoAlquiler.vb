@@ -388,6 +388,7 @@ Public Class MntoAlquiler
     Friend WithEvents TextBox2 As Solmicro.Expertis.Engine.UI.TextBox
     Friend WithEvents Button1 As Solmicro.Expertis.Engine.UI.Button
     Friend WithEvents bGenerarAlbaran As Solmicro.Expertis.Engine.UI.Button
+    Friend WithEvents bCreaAlbaran As Solmicro.Expertis.Engine.UI.Button
     Friend WithEvents MenuAlquiler As Janus.Windows.UI.CommandBars.UIContextMenu
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
@@ -820,6 +821,7 @@ Public Class MntoAlquiler
         Me.mnuSeguimiento = New Janus.Windows.UI.CommandBars.UICommand("mnuSeguimiento")
         Me.mnuAlbaran = New Janus.Windows.UI.CommandBars.UICommand("mnuAlbaran")
         Me.mnuSalidaRetorno = New Janus.Windows.UI.CommandBars.UICommand("mnuSalidaRetorno")
+        Me.bCreaAlbaran = New Solmicro.Expertis.Engine.UI.Button
         CType(Me.ToolBar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MenuBar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UiCommandManager1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -4240,6 +4242,7 @@ Public Class MntoAlquiler
         '
         'FraArbol
         '
+        Me.FraArbol.Controls.Add(Me.bCreaAlbaran)
         Me.FraArbol.Controls.Add(Me.bGenerarAlbaran)
         Me.FraArbol.Controls.Add(Me.txtOServicioFind)
         Me.FraArbol.Controls.Add(Me.lblOServicioFind)
@@ -4257,7 +4260,7 @@ Public Class MntoAlquiler
         '
         'bGenerarAlbaran
         '
-        Me.bGenerarAlbaran.Location = New System.Drawing.Point(171, 10)
+        Me.bGenerarAlbaran.Location = New System.Drawing.Point(88, 40)
         Me.bGenerarAlbaran.Name = "bGenerarAlbaran"
         Me.bGenerarAlbaran.Size = New System.Drawing.Size(75, 28)
         Me.bGenerarAlbaran.TabIndex = 228
@@ -4650,6 +4653,14 @@ Public Class MntoAlquiler
         Me.mnuSalidaRetorno.Key = "mnuSalidaRetorno"
         Me.mnuSalidaRetorno.Name = "mnuSalidaRetorno"
         Me.mnuSalidaRetorno.Text = "Generar Albarán de Salida y Retorno"
+        '
+        'bCreaAlbaran
+        '
+        Me.bCreaAlbaran.Location = New System.Drawing.Point(171, 15)
+        Me.bCreaAlbaran.Name = "bCreaAlbaran"
+        Me.bCreaAlbaran.Size = New System.Drawing.Size(79, 20)
+        Me.bCreaAlbaran.TabIndex = 229
+        Me.bCreaAlbaran.Text = resources.GetString("bCreaAlbaran.Text")
         '
         'MntoAlquiler
         '
@@ -7984,4 +7995,8 @@ Public Class MntoAlquiler
 
         Return dt
     End Function
+
+    Private Sub bCreaAlbaran_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bCreaAlbaran.Click
+        NuevaOrden(0)
+    End Sub
 End Class
