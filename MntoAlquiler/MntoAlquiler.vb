@@ -389,6 +389,8 @@ Public Class MntoAlquiler
     Friend WithEvents Button1 As Solmicro.Expertis.Engine.UI.Button
     Friend WithEvents bGenerarAlbaran As Solmicro.Expertis.Engine.UI.Button
     Friend WithEvents bCreaAlbaran As Solmicro.Expertis.Engine.UI.Button
+    Friend WithEvents mnuAlbaran1 As Janus.Windows.UI.CommandBars.UICommand
+    Friend WithEvents Separator5 As Janus.Windows.UI.CommandBars.UICommand
     Friend WithEvents MenuAlquiler As Janus.Windows.UI.CommandBars.UIContextMenu
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
@@ -772,6 +774,7 @@ Public Class MntoAlquiler
         Me.pnlFianzaObligatoria = New Solmicro.Expertis.Engine.UI.Panel
         Me.lblFianzaObligatoria = New Solmicro.Expertis.Engine.UI.Label
         Me.FraArbol = New Solmicro.Expertis.Engine.UI.Frame
+        Me.bCreaAlbaran = New Solmicro.Expertis.Engine.UI.Button
         Me.bGenerarAlbaran = New Solmicro.Expertis.Engine.UI.Button
         Me.txtOServicioFind = New Solmicro.Expertis.Engine.UI.TextBox
         Me.lblOServicioFind = New Solmicro.Expertis.Engine.UI.Label
@@ -808,6 +811,7 @@ Public Class MntoAlquiler
         Me.MnuGuion5 = New Janus.Windows.UI.CommandBars.UICommand("MnuGuion5")
         Me.mnuAlbaran2 = New Janus.Windows.UI.CommandBars.UICommand("mnuAlbaran")
         Me.mnuSalidaRetorno2 = New Janus.Windows.UI.CommandBars.UICommand("mnuSalidaRetorno")
+        Me.Separator5 = New Janus.Windows.UI.CommandBars.UICommand("Separator")
         Me.MnuNuevaOrden = New Janus.Windows.UI.CommandBars.UICommand("MnuNuevaOrden")
         Me.MnuDeleteOrden = New Janus.Windows.UI.CommandBars.UICommand("MnuDeleteOrden")
         Me.mnuRetornoAvisos = New Janus.Windows.UI.CommandBars.UICommand("mnuRetornoAvisos")
@@ -821,7 +825,7 @@ Public Class MntoAlquiler
         Me.mnuSeguimiento = New Janus.Windows.UI.CommandBars.UICommand("mnuSeguimiento")
         Me.mnuAlbaran = New Janus.Windows.UI.CommandBars.UICommand("mnuAlbaran")
         Me.mnuSalidaRetorno = New Janus.Windows.UI.CommandBars.UICommand("mnuSalidaRetorno")
-        Me.bCreaAlbaran = New Solmicro.Expertis.Engine.UI.Button
+        Me.mnuAlbaran1 = New Janus.Windows.UI.CommandBars.UICommand("mnuAlbaran")
         CType(Me.ToolBar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MenuBar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UiCommandManager1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -940,8 +944,66 @@ Public Class MntoAlquiler
         Me.UiCommandManager1.Commands.AddRange(New Janus.Windows.UI.CommandBars.UICommand() {Me.MnuNuevaOrden, Me.MnuDeleteOrden, Me.mnuRetornoAvisos, Me.mnuRetornoMaterial, Me.mnuPrefacturacion, Me.mnuFacturacion, Me.mnuADDFianza, Me.mnuDeleteFianza, Me.mnuGeneraHitos, Me.mnuIncidencias, Me.mnuSeguimiento, Me.mnuAlbaran, Me.mnuSalidaRetorno})
         Me.UiCommandManager1.ContextMenus.AddRange(New Janus.Windows.UI.CommandBars.UIContextMenu() {Me.MenuAlquiler})
         '
+        'GoFirst
+        '
+        Me.GoFirst.Icon = CType(resources.GetObject("GoFirst.Icon"), System.Drawing.Icon)
+        '
+        'GoPrevious
+        '
+        Me.GoPrevious.Icon = CType(resources.GetObject("GoPrevious.Icon"), System.Drawing.Icon)
+        '
+        'GoNext
+        '
+        Me.GoNext.Icon = CType(resources.GetObject("GoNext.Icon"), System.Drawing.Icon)
+        '
+        'Delete
+        '
+        Me.Delete.Icon = CType(resources.GetObject("Delete.Icon"), System.Drawing.Icon)
+        Me.Delete.Text = ""
+        '
+        'Ok
+        '
+        Me.Ok.Icon = CType(resources.GetObject("Ok.Icon"), System.Drawing.Icon)
+        Me.Ok.Text = ""
+        '
         'Cancel
         '
+        Me.Cancel.Icon = CType(resources.GetObject("Cancel.Icon"), System.Drawing.Icon)
+        Me.Cancel.Text = ""
+        '
+        'Print
+        '
+        Me.Print.Icon = CType(resources.GetObject("Print.Icon"), System.Drawing.Icon)
+        Me.Print.Text = ""
+        '
+        'Search
+        '
+        Me.Search.Icon = CType(resources.GetObject("Search.Icon"), System.Drawing.Icon)
+        Me.Search.Text = ""
+        '
+        'GoLast
+        '
+        Me.GoLast.Icon = CType(resources.GetObject("GoLast.Icon"), System.Drawing.Icon)
+        '
+        'Find
+        '
+        Me.Find.Icon = CType(resources.GetObject("Find.Icon"), System.Drawing.Icon)
+        Me.Find.Text = ""
+        '
+        'NewRow
+        '
+        Me.NewRow.Icon = CType(resources.GetObject("NewRow.Icon"), System.Drawing.Icon)
+        Me.NewRow.Text = ""
+        '
+        'Requery
+        '
+        Me.Requery.Icon = CType(resources.GetObject("Requery.Icon"), System.Drawing.Icon)
+        Me.Requery.Text = ""
+        '
+        'ExecuteActions
+        '
+        Me.ExecuteActions.Icon = CType(resources.GetObject("ExecuteActions.Icon"), System.Drawing.Icon)
+        Me.ExecuteActions.Text = ""
         '
         'MainPanel
         '
@@ -4258,6 +4320,14 @@ Public Class MntoAlquiler
         Me.FraArbol.TabStop = False
         Me.FraArbol.Text = "Criterios árbol"
         '
+        'bCreaAlbaran
+        '
+        Me.bCreaAlbaran.Location = New System.Drawing.Point(171, 15)
+        Me.bCreaAlbaran.Name = "bCreaAlbaran"
+        Me.bCreaAlbaran.Size = New System.Drawing.Size(79, 20)
+        Me.bCreaAlbaran.TabIndex = 229
+        Me.bCreaAlbaran.Text = resources.GetString("bCreaAlbaran.Text")
+        '
         'bGenerarAlbaran
         '
         Me.bGenerarAlbaran.Location = New System.Drawing.Point(88, 40)
@@ -4460,7 +4530,7 @@ Public Class MntoAlquiler
         'MenuAlquiler
         '
         Me.MenuAlquiler.CommandManager = Me.UiCommandManager1
-        Me.MenuAlquiler.Commands.AddRange(New Janus.Windows.UI.CommandBars.UICommand() {Me.MnuNuevaOrden2, Me.MnuGuion, Me.MnuDeleteOrden2, Me.MnuGuion2, Me.mnuRetornoAvisos2, Me.mnuRetornoMaterial2, Me.mnuPrefacturacion2, Me.mnuFacturacion2, Me.MnuGuion3, Me.mnuADDFianza2, Me.mnuDeleteFianza2, Me.MnuGuion4, Me.mnuGeneraHitos2, Me.mnuIncidencias2, Me.mnuSeguimiento2, Me.MnuGuion5, Me.mnuAlbaran2, Me.mnuSalidaRetorno2})
+        Me.MenuAlquiler.Commands.AddRange(New Janus.Windows.UI.CommandBars.UICommand() {Me.MnuNuevaOrden2, Me.MnuGuion, Me.MnuDeleteOrden2, Me.MnuGuion2, Me.mnuRetornoAvisos2, Me.mnuRetornoMaterial2, Me.mnuPrefacturacion2, Me.mnuFacturacion2, Me.MnuGuion3, Me.mnuADDFianza2, Me.mnuDeleteFianza2, Me.MnuGuion4, Me.mnuGeneraHitos2, Me.mnuIncidencias2, Me.mnuSeguimiento2, Me.MnuGuion5, Me.mnuAlbaran2, Me.mnuSalidaRetorno2, Me.Separator5})
         Me.MenuAlquiler.Key = "MenuAlquiler"
         '
         'MnuNuevaOrden2
@@ -4563,6 +4633,12 @@ Public Class MntoAlquiler
         Me.mnuSalidaRetorno2.Key = "mnuSalidaRetorno"
         Me.mnuSalidaRetorno2.Name = "mnuSalidaRetorno2"
         '
+        'Separator5
+        '
+        Me.Separator5.CommandType = Janus.Windows.UI.CommandBars.CommandType.Separator
+        Me.Separator5.Key = "Separator"
+        Me.Separator5.Name = "Separator5"
+        '
         'MnuNuevaOrden
         '
         Me.MnuNuevaOrden.Icon = CType(resources.GetObject("MnuNuevaOrden.Icon"), System.Drawing.Icon)
@@ -4654,13 +4730,10 @@ Public Class MntoAlquiler
         Me.mnuSalidaRetorno.Name = "mnuSalidaRetorno"
         Me.mnuSalidaRetorno.Text = "Generar Albarán de Salida y Retorno"
         '
-        'bCreaAlbaran
+        'mnuAlbaran1
         '
-        Me.bCreaAlbaran.Location = New System.Drawing.Point(171, 15)
-        Me.bCreaAlbaran.Name = "bCreaAlbaran"
-        Me.bCreaAlbaran.Size = New System.Drawing.Size(79, 20)
-        Me.bCreaAlbaran.TabIndex = 229
-        Me.bCreaAlbaran.Text = resources.GetString("bCreaAlbaran.Text")
+        Me.mnuAlbaran1.Key = "mnuAlbaran"
+        Me.mnuAlbaran1.Name = "mnuAlbaran1"
         '
         'MntoAlquiler
         '
@@ -5010,6 +5083,9 @@ Public Class MntoAlquiler
         Me.FormActions.Add(cnINCIDENCIASFACTURACION, AddressOf AccionAbrirIncidenciasAlquiler, ExpertisApp.GetIcon("gear_preferences.ico"))
         Me.AddSeparator()
         Me.FormActions.Add(cnCALENDARIO, AddressOf VerCalendarioAlquiler, ExpertisApp.GetIcon("calendar_preferences.ico"))
+        'David Velasco 26/09/22 CARGA EXCEL- ALBARAN DE SALIDa
+        Me.AddSeparator()
+        Me.FormActions.Add("Generar Orden de Servicio desde Excel", AddressOf GenerarAlbaranExcel, ExpertisApp.GetIcon("book_green.ico"))
     End Sub
 
     Private Sub LoadGridActions()
@@ -5215,7 +5291,114 @@ Public Class MntoAlquiler
     Private Sub VerCalendarioAlquiler()
         AbrirMntoCalendarioAlquiler(Me.CurrentRow("IDObra"))
     End Sub
+    'David Velasco 26/09/22
+    'NOTA: La fecha que importa a la hora de empezar a cobrar es la fecha que sale al generar albarán.
+    Public Sub GenerarAlbaranExcel()
+        '1. Generar la Orden de Servicio(con fecha especifica).
+        Dim obra As New ObraDatos
+        obra = compruebaExcel()
+        If obra.ruta.ToString.Length = 0 Then
+            MsgBox("Este Excel con este nombre y ubicacion ya ha sido insertado anteriormente.")
+        Else
+            'COMPROBACION DE QUE HAY STOCK EN EL 011. Sino te avisa
+            Dim dtStock As New DataTable
+            Dim f As New Filter
 
+            For Each dr As DataRow In obra.dt.Rows
+                f.Add("IDArticulo", FilterOperator.Equal, dr("IDArticulo").ToString)
+                f.Add("IDAlmacen", FilterOperator.Equal, "011")
+                dtStock = New BE.DataEngine().Filter("tbMaestroArticuloAlmacen", f)
+                If dtStock.Rows(0)("StockFisico") >= dr("Cantidad") Then
+                Else
+                    ExpertisApp.GenerateMessage("El articulo " & dr("IDArticulo") & " no tiene stock suficiente para crear la orden.")
+                    Exit Sub
+                End If
+                f.Clear()
+                dtStock = Nothing
+            Next
+            'CREACION DE OS Y ARTICULOS DEL EXCEL
+            NuevaOrdenHilti(0, obra)
+            blnRefreshArbol = True
+            Me.UpdateChanges()
+
+            'PARTE DE INSERTAR
+
+            Dim dtArti As New DataTable
+            Dim filtro As New Filter
+
+            Dim dtFami As New DataTable
+            Dim filtroFami As New Filter
+
+            'Obtengo el ultimo IDTrabajo
+            Dim dtIDT As New DataTable
+            Dim sql As String
+            sql = "select Max(IDTrabajo) from tbObraTrabajo"
+            Dim ac As New Business.ClasesTecozam.Acero
+            dtIDT = ac.DevuelveTabla(sql)
+            For Each dr As DataRow In obra.dt.Rows
+                Dim cl As New ObraMaterial
+                Dim dt As DataTable = cl.AddNewForm
+
+                'Obtengo los datos del articulo por bbdd
+                filtro.Add("IDArticulo", FilterOperator.Equal, dr("IDArticulo").ToString)
+                dtArti = New BE.DataEngine().Filter("tbMaestroArticulo", filtro)
+
+                dt.Rows(0)("IDTrabajo") = dtIDT.Rows(0)("Column1")
+                dt.Rows(0)("IDObra") = Me.CurrentRow("IDObra")
+                dt.Rows(0)("IDMaterial") = dr("IDArticulo")
+                dt.Rows(0)("IDMaterialOrigen") = dr("IDArticulo")
+                dt.Rows(0)("DescMaterial") = dtArti.Rows(0)("DescArticulo")
+                dt.Rows(0)("QPrev") = dr("Cantidad")
+                dt.Rows(0)("Qunidad") = dr("Cantidad")
+                dt.Rows(0)("PrecioPrevMatA") = dtArti.Rows(0)("PrecioEstandarA")
+                dt.Rows(0)("ImpPrevMatA") = dr("Cantidad") * dtArti.Rows(0)("PrecioEstandarA")
+                dt.Rows(0)("FechaEntrega") = Date.Today
+                dt.Rows(0)("Facturable") = 1
+                dt.Rows(0)("Expedible") = 1
+                '
+                If (dtArti.Rows(0)("IDTipo") = "30" Or dtArti.Rows(0)("IDFamilia") = "2003" Or dtArti.Rows(0)("IDFamilia") = "2004" Or dtArti.Rows(0)("IDSubfamilia").ToString = "HIDRAULICA") Then
+                    If (dtArti.Rows(0)("IDFamilia") <> "3031") Then
+                        dt.Rows(0)("TipoFacturacion") = 3
+                        dt.Rows(0)("TipoFactAlquiler") = 1
+                        '.SetValue("TipoFactAlquiler", CInt(enumTipoFacturacionAlquiler.enumTFADiasNaturales))
+                        '.SetValue("TipoFacturacion", CInt(enumomATipoFacturacionAlquiler.omAPorAlquiler))
+                    Else
+                        dt.Rows(0)("TipoFacturacion") = 2
+                        dt.Rows(0)("TipoFactAlquiler") = 0
+                    End If
+                Else
+                    dt.Rows(0)("TipoFacturacion") = 2
+                    dt.Rows(0)("TipoFactAlquiler") = 0
+                End If
+                '
+                dt.Rows(0)("Estado") = 0
+                dt.Rows(0)("IDAlmacen") = "011"
+                dt.Rows(0)("IDUdInterna") = dtArti.Rows(0)("IDUdInterna")
+                dt.Rows(0)("IDUdVenta") = dtArti.Rows(0)("IDUdVenta")
+                dt.Rows(0)("IDUdCompra") = dtArti.Rows(0)("IDUdCompra")
+
+                'CCCompra y CCVenta
+                Try
+                    filtroFami.Add("IDTipo", FilterOperator.Equal, dtArti.Rows(0)("IDTipo"))
+                    filtroFami.Add("IDFamilia", FilterOperator.Equal, dtArti.Rows(0)("IDFamilia"))
+                    dtFami = New BE.DataEngine().Filter("tbMaestroArticulo", filtroFami)
+                    dt.Rows(0)("CCCompra") = dtFami.Rows(0)("CCCompra")
+                    dt.Rows(0)("CCVenta") = dtFami.Rows(0)("CCVenta")
+                Catch ex As Exception
+                End Try
+
+                Try
+                    cl.Update(dt)
+                Catch ex As Exception
+                End Try
+                filtro.Clear()
+            Next
+            Me.UpdateChanges()
+        End If
+
+
+
+    End Sub
 #End Region
 
 #Region " Acciones Grid "
@@ -6212,6 +6395,7 @@ Public Class MntoAlquiler
             End If
             Me.MenuAlquiler.Commands("MnuGuion5").Visible = Me.MenuAlquiler.Commands("MnuGuion").Visible
             Me.MenuAlquiler.Commands("mnuAlbaran").Visible = Me.MenuAlquiler.Commands("MnuGuion").Visible
+
             If blnEnabled Then
                 If Not Nz(CurrentRow("FianzaObligatoria"), False) Or (Nz(CurrentRow("FianzaObligatoria"), False) And blnFianza) Then
                     Me.MenuAlquiler.Commands("mnuAlbaran").Enabled = InheritableBoolean.True
@@ -7784,8 +7968,11 @@ Public Class MntoAlquiler
                         ExpertisApp.GenerateMessage("No hay stock suficiente.", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         GridMaterial.SetValue("QUnidad", 0)
                         GridMaterial.SetValue("QPrev", 0)
+                        setPrecios()
+                        Me.UpdateChanges()
+                    Else
+                        setPrecios()
                     End If
-                    setPrecios()
                 Case "Lote"
                     setPrecios()
                     'Si Articulo es de Alquiler. Tipo Factura Alquiler: Dias Naturales y  Tipo Facturacion: Por Alquiler
@@ -7804,7 +7991,7 @@ Public Class MntoAlquiler
 
                     End Try
 
-                    If (tipo = "30" Or familia = "2003" Or familia = "2004" Or subfamilia = "HIDRAULICA") Then
+                    If (tipo = "30" Or familia = "2003" Or familia = "2004") Then
                         If (familia <> "3031") Then
                             .SetValue("TipoFactAlquiler", CInt(enumTipoFacturacionAlquiler.enumTFADiasNaturales))
                             .SetValue("TipoFacturacion", CInt(enumomATipoFacturacionAlquiler.omAPorAlquiler))
@@ -7973,10 +8160,10 @@ Public Class MntoAlquiler
             Dim hoja As String
             Dim rango As String
             hoja = "Hoja1"
-            rango = "A1:C100"
+            rango = "A1:B100"
             obra.dt.Columns.Add("IDArticulo")
             obra.dt.Columns.Add("Cantidad")
-            obra.dt.Columns.Add("Almacen")
+            'obra.dt.Columns.Add("Almacen")
             obra.dt = ObtenerDatosExcel(obra.ruta, hoja, rango)
             Return obra
         End If

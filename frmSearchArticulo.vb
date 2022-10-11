@@ -1097,7 +1097,10 @@ Public Class frmSearchArticulo
     End Sub
 
     Private Sub gridActivos_FormattingRow(ByVal sender As Object, ByVal e As Janus.Windows.GridEX.RowLoadEventArgs) Handles gridActivos.FormattingRow
-        e.Row.RowStyle = gridActivos.FormatStyles("FMT" & e.Row.DataRow("IDEstadoActivo"))
+        Try
+            e.Row.RowStyle = gridActivos.FormatStyles("FMT" & e.Row.DataRow("IDEstadoActivo"))
+        Catch ex As Exception
+        End Try
     End Sub
 
 #End Region

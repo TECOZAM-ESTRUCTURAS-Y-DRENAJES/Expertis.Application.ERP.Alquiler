@@ -797,6 +797,7 @@ Public Class CIExpedicion
     Private Sub LoadToolbarActions()
         Me.FormActions.Add("Generar Albaranes", AddressOf Expedir, ExpertisApp.GetIcon("xAlbaranesVenta.ico"))
         Me.FormActions.Add("Ver Disponibilidad", AddressOf VerDisponibilidad, ExpertisApp.GetIcon("folder_view.ico"))
+
     End Sub
 
     Private Sub LoadGridActions()
