@@ -236,6 +236,7 @@
     <Reference Include="System.Data">
       <Name>System.Data</Name>
     </Reference>
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing">
       <Name>System.Drawing</Name>
     </Reference>
@@ -349,6 +350,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consultas\CITrazabilidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearArticuloConNSerie.Designer.vb">
+      <DependentUpon>frmCrearArticuloConNSerie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrearArticuloConNSerie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeguimientoNumeroSerie.Designer.vb">
+      <DependentUpon>frmSeguimientoNumeroSerie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeguimientoNumeroSerie.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MntoAlquiler\FrmAddOrden.vb">
@@ -563,6 +576,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\CITrazabilidad.resx">
       <DependentUpon>CITrazabilidad.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearArticuloConNSerie.resx">
+      <DependentUpon>frmCrearArticuloConNSerie.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeguimientoNumeroSerie.resx">
+      <DependentUpon>frmSeguimientoNumeroSerie.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MntoAlquiler\FrmAddOrden.resx">

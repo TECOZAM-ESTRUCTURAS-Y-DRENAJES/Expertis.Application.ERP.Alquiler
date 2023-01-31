@@ -5086,6 +5086,7 @@ Public Class MntoAlquiler
         'David Velasco 26/09/22 CARGA EXCEL- ALBARAN DE SALIDa
         Me.AddSeparator()
         Me.FormActions.Add("Generar Orden de Servicio desde Excel", AddressOf GenerarAlbaranExcel, ExpertisApp.GetIcon("book_green.ico"))
+        'Me.FormActions.Add("CANCAMOS", AddressOf Cancamos, ExpertisApp.GetIcon("book_green.ico"))
     End Sub
 
     Private Sub LoadGridActions()
@@ -5379,11 +5380,11 @@ Public Class MntoAlquiler
 
                 'CCCompra y CCVenta
                 Try
-                    filtroFami.Add("IDTipo", FilterOperator.Equal, dtArti.Rows(0)("IDTipo"))
+                    'filtroFami.Add("IDTipo", FilterOperator.Equal, dtArti.Rows(0)("IDTipo"))
                     filtroFami.Add("IDFamilia", FilterOperator.Equal, dtArti.Rows(0)("IDFamilia"))
-                    dtFami = New BE.DataEngine().Filter("tbMaestroArticulo", filtroFami)
-                    dt.Rows(0)("CCCompra") = dtFami.Rows(0)("CCCompra")
+                    dtFami = New BE.DataEngine().Filter("tbMaestroFamilia", filtroFami)
                     dt.Rows(0)("CCVenta") = dtFami.Rows(0)("CCVenta")
+                    dt.Rows(0)("CCCompra") = dtFami.Rows(0)("CCCompra")
                 Catch ex As Exception
                 End Try
 
@@ -5397,6 +5398,12 @@ Public Class MntoAlquiler
         End If
 
 
+
+    End Sub
+
+    Public Sub Cancamos()
+        Dim frm As New frmCrearArticuloConNSerie
+        frm.ShowDialog()
 
     End Sub
 #End Region
@@ -6577,6 +6584,30 @@ Public Class MntoAlquiler
     End Sub
 
     Private Sub mnuAlbaran_Click(ByVal sender As Object, ByVal e As Janus.Windows.UI.CommandBars.CommandEventArgs) Handles mnuAlbaran.Click
+        Dim f1 As New Filter
+        f1.Add("IDObra", FilterOperator.Equal, Me.CurrentRow("IDObra"), FilterType.Numeric)
+        f1.Add("IDTrabajo", FilterOperator.Equal, drTrabajos("IDTrabajo"))
+
+        Dim dt As New DataTable
+        dt = New BE.DataEngine().Filter("vFrmAlquilerMateriales", f1)
+
+
+        Dim dtArtiStock As New DataTable
+        Dim filtroArticulo As New Filter
+
+        For Each dr As DataRow In dt.Rows
+            filtroArticulo.Add("IDAlmacen", FilterOperator.Equal, dr("IDAlmacen"))
+            filtroArticulo.Add("IDArticulo", FilterOperator.Equal, dr("IDMaterial"))
+            dtArtiStock = New BE.DataEngine().Filter("tbMaestroArticuloAlmacen", filtroArticulo)
+
+            If dtArtiStock.Rows(0)("StockFisico") >= dr("QPrev") Then
+            Else
+                MessageBox.Show("El artículo " & dr("IDMaterial").ToString & " no tiene suficiente stock para generar el albarán.", "Proceso Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+        Next
+
+
         ProcesoAlbaran(General.enumTipoAlbaran.Albaran)
     End Sub
 

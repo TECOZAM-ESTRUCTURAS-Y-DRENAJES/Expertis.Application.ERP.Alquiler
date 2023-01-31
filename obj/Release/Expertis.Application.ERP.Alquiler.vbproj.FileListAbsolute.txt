@@ -67,3 +67,5 @@ C:\Users\lgonzalez\Desktop\EXPERTIS\DESARROLLO EXPERTIS\FR2Sergio\Application\Ex
 C:\Users\lgonzalez\Desktop\EXPERTIS\DESARROLLO EXPERTIS\FR2Sergio\Application\Expertis.Application.ERP.Alquiler\obj\Release\Expertis.Application.ERP.Alquiler.dll.licenses
 C:\Users\lgonzalez\Desktop\EXPERTIS\DESARROLLO EXPERTIS\FR2Sergio\Application\Expertis.Application.ERP.Alquiler\obj\Release\Expertis.Application.ERP.Alquiler.dll
 C:\Users\lgonzalez\Desktop\EXPERTIS\DESARROLLO EXPERTIS\FR2Sergio\Application\Expertis.Application.ERP.Alquiler\obj\Release\Expertis.Application.ERP.Alquiler.pdb
+C:\Users\lgonzalez\Desktop\EXPERTIS\DESARROLLO EXPERTIS\FR2Sergio\Application\Expertis.Application.ERP.Alquiler\obj\Release\Solmicro.Expertis.Application.ERP.Alquiler.frmSeguimientoNumeroSerie.resources
+C:\Users\lgonzalez\Desktop\EXPERTIS\DESARROLLO EXPERTIS\FR2Sergio\Application\Expertis.Application.ERP.Alquiler\obj\Release\Solmicro.Expertis.Application.ERP.Alquiler.frmCrearArticuloConNSerie.resources

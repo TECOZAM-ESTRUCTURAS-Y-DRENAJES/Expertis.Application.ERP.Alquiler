@@ -157,9 +157,19 @@ Module General
                             datosAct.Retornos = False
 
                             Dim rslt As ResultAlbaranAlquiler = New BE.DataEngine().RunProcess(GetType(PrcActualizarAlbaranAlquiler), datosAct)
+
+                            'David Velasco 24/01/23
+                            'Realiza cambios de los activos en los almacenes con fecha + historico de movimientos
+                            Dim nalbaran As String
+                            nalbaran = rslt.PropuestaAlbaranes.Rows(0)("NAlbaran")
+                            seguimientoActivos(dtExpedir, nalbaran)
+
                             TratarLog(rslt.CreateData, enumTipoDocumentoCreado.AlbaranVentaAlquiler, True, True, rslt.StockUpdateData)
 
                             oCursor = Cursors.Default
+
+                            
+
                         Else
                             ExpertisApp.GenerateMessage("Proceso cancelado.", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         End If
@@ -172,7 +182,33 @@ Module General
             End If
         End If
     End Sub
+    Public Sub seguimientoActivos(ByVal dtExpedir As DataTable, ByVal nalbaran As String)
+        Dim fechaDocumento As String
+        Dim idAlmacenOrigen As String
+        Dim idAlmacenDestino As String
 
+        fechaDocumento = dtExpedir.Rows(0)("FechaEntrega")
+        idAlmacenDestino = dtExpedir.Rows(0)("IDAlmacenDestino")
+        idAlmacenOrigen = dtExpedir.Rows(0)("IDAlmacen")
+        'Seguimiento articulos con nº serie
+        Dim tbArticulos As DataTable
+        Dim f As New Filter(FilterUnionOperator.Or)
+        For Each fila As DataRow In dtExpedir.Rows
+            f.Add("IDArticulo", fila("IDMaterial"))
+        Next
+
+        tbArticulos = New BE.DataEngine().Filter("vControlArticulosNSerie", f)
+        If tbArticulos.Rows.Count <> 0 Then
+
+            Dim frmSegNSeries As New frmSeguimientoNumeroSerie
+            frmSegNSeries.filtro = f
+            frmSegNSeries.fechaDoc = fechaDocumento
+            frmSegNSeries.idalmacen = idAlmacenDestino
+            frmSegNSeries.idalmacenorigen = idAlmacenOrigen
+            frmSegNSeries.nalbaran = nalbaran
+            frmSegNSeries.ShowDialog()
+        End If
+    End Sub
     Public Function AlbaranesGenerados(ByVal log As LogProcess) As Integer()
         Dim Ns(-1) As Integer
         Dim FirstID As String = String.Empty

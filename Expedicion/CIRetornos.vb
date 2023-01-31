@@ -939,6 +939,7 @@ Public Class CIRetornos
 
                                                 Dim rslt As ResultAlbaranAlquiler = New BE.DataEngine().RunProcess(GetType(PrcActualizarAlbaranAlquilerSinStock), datosAct)
                                                 'MsgBox("Se ha generado el vencimiento correctamente.", MsgBoxStyle.OkOnly)
+
                                                 Me.Cursor = Cursors.Default
                                                 '2ª PARTE- hacer el movimiento de un almacen a otro.
                                                 'If blnTraspaso Then
@@ -995,10 +996,17 @@ Public Class CIRetornos
                                             TraspasoInfo.dtRetornos = dtMarcados
                                             Dim rsltTraspaso As ResultAlbaranAlquiler = GenerarTraspaso(TraspasoInfo)
                                             rslt = UnirResults(rslt, rsltTraspaso)
+                                            MsgBox("Hola")
                                         ElseIf Not rslt.StockUpdateData Is Nothing AndAlso rslt.StockUpdateData.Length > 0 Then
+                                            '------------- ACTUALIZACION ACTIVOS CON Nº DE SERIE 31/1/23
+                                            Dim nalbaran As String
+                                            nalbaran = rslt.PropuestaAlbaranes.Rows(0)("NAlbaran")
+                                            seguimientoActivos(dtMarcados, nalbaran)
+                                            '------------- FIN ACTUALIZACION ACTIVOS
                                             Dim frmStock As New DetalleActualizacionStock
                                             frmStock.DataSource = rslt.StockUpdateData
                                             frmStock.ShowDialog()
+                                            
                                         End If
 
                                         Me.UnCheckAllRecords()
@@ -1316,8 +1324,17 @@ Public Class CIRetornos
                                                 'CREACIÓN DE LA ORDEN DE SERVICIO
                                                 'David Velasco 04/08/22
                                                 TraspasoInfo.dtRetornos = dtMarcados
+
+                                                
+
                                                 Dim rsltTraspaso As ResultAlbaranAlquiler = GenerarTraspaso2(TraspasoInfo)
                                                 rslt = UnirResults(rslt, rsltTraspaso)
+
+                                                '------------- ACTUALIZACION ACTIVOS CON Nº DE SERIE 31/1/23
+                                                Dim nalbaran As String
+                                                nalbaran = rslt.PropuestaAlbaranes.Rows(0)("NAlbaran")
+                                                seguimientoActivos(dtMarcados, nalbaran)
+                                                '------------- FIN ACTUALIZACION ACTIVOS
 
                                                 Dim frmStock As New DetalleActualizacionStock
                                                 frmStock.DataSource = rslt.StockUpdateData
@@ -1350,6 +1367,33 @@ Public Class CIRetornos
             End If
         Else
             ExpertisApp.GenerateMessage("Proceso cancelado. Es necesario asignar un Operario al Usuario.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
+    End Sub
+    Public Sub seguimientoActivos(ByVal dtExpedir As DataTable, ByVal nalbaran As String)
+        Dim fechaDocumento As String
+        Dim idAlmacenOrigen As String
+        Dim idAlmacenDestino As String
+
+        fechaDocumento = dtExpedir.Rows(0)("FechaAlbaran")
+        idAlmacenDestino = dtExpedir.Rows(0)("IDAlmacenDeposito")
+        idAlmacenOrigen = dtExpedir.Rows(0)("IDAlmacen")
+        'Seguimiento articulos con nº serie
+        Dim tbArticulos As DataTable
+        Dim f As New Filter(FilterUnionOperator.Or)
+        For Each fila As DataRow In dtExpedir.Rows
+            f.Add("IDArticulo", fila("IDMaterial"))
+        Next
+
+        tbArticulos = New BE.DataEngine().Filter("vControlArticulosNSerie", f)
+        If tbArticulos.Rows.Count <> 0 Then
+
+            Dim frmSegNSeries As New frmSeguimientoNumeroSerie
+            frmSegNSeries.filtro = f
+            frmSegNSeries.fechaDoc = fechaDocumento
+            frmSegNSeries.idalmacen = idAlmacenDestino
+            frmSegNSeries.idalmacenorigen = idAlmacenOrigen
+            frmSegNSeries.nalbaran = nalbaran
+            frmSegNSeries.ShowDialog()
         End If
     End Sub
 
