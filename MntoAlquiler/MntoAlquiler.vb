@@ -6595,7 +6595,9 @@ Public Class MntoAlquiler
         Dim dtArtiStock As New DataTable
         Dim filtroArticulo As New Filter
 
+        '---------------CHECK DE ARTICULOS Y SU STOCK INDIVIDUALMENTE
         For Each dr As DataRow In dt.Rows
+            filtroArticulo.Clear()
             filtroArticulo.Add("IDAlmacen", FilterOperator.Equal, dr("IDAlmacen"))
             filtroArticulo.Add("IDArticulo", FilterOperator.Equal, dr("IDMaterial"))
             dtArtiStock = New BE.DataEngine().Filter("tbMaestroArticuloAlmacen", filtroArticulo)
@@ -6606,8 +6608,52 @@ Public Class MntoAlquiler
                 Exit Sub
             End If
         Next
+        '------------CHECK DE ARTICULOS Y SU STOCK AGRUPADO POR IDARTICULO
+        Dim dt2 As New DataTable
+        dt2 = New BE.DataEngine().Filter("vFrmAlquilerMateriales", f1, , "IDMaterial")
+        Dim f2 As New Filter
+        f2.Add("IDAlmacen", FilterOperator.Equal, dt2.Rows(0)("IDAlmacen"))
 
+        Dim cont As Integer
+        cont = 0
 
+        Dim sumaStock As Double
+        sumaStock = 0
+
+        Dim dtCheck As DataTable
+
+        For Each dr2 As DataRow In dt2.Rows
+            f2.Clear()
+            Try
+                If dt2.Rows(cont)("IDMaterial") = dt2.Rows(cont + 1)("IDMaterial") Then
+                    sumaStock += dt2.Rows(cont)("QPrev")
+                Else
+                    sumaStock += dt2.Rows(cont)("QPrev")
+                    f2.Add("IDArticulo", FilterOperator.Equal, dt2.Rows(cont)("IDMaterial"))
+                    'Sumo los articulos con mismo ID y hago el check
+                    dtCheck = New BE.DataEngine().Filter("tbMaestroArticuloAlmacen", f2)
+                    If dtCheck.Rows(0)("StockFisico") >= sumaStock Then
+                    Else
+                        MessageBox.Show("El artículo " & dt2.Rows(cont)("IDMaterial").ToString & " no tiene suficiente stock para generar el albarán al sumar las distintas lineas del mismo artículo.", "Proceso Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        Exit Sub
+                    End If
+                    sumaStock = 0
+                End If
+                cont += 1
+            Catch ex As Exception
+                sumaStock += dt2.Rows(cont)("QPrev")
+                f2.Add("IDArticulo", FilterOperator.Equal, dt2.Rows(cont)("IDMaterial"))
+                'Sumo los articulos con mismo ID y hago el check
+                dtCheck = New BE.DataEngine().Filter("tbMaestroArticuloAlmacen", f2)
+                If dtCheck.Rows(0)("StockFisico") >= sumaStock Then
+                Else
+                    MessageBox.Show("El artículo " & dt2.Rows(cont)("IDMaterial").ToString & " no tiene suficiente stock para generar el albarán al sumar las distintas lineas del mismo artículo.", "Proceso Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Exit Sub
+                End If
+                sumaStock = 0
+            End Try
+            
+        Next
         ProcesoAlbaran(General.enumTipoAlbaran.Albaran)
     End Sub
 

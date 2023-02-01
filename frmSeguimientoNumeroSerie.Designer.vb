@@ -36,9 +36,9 @@ Partial Class frmSeguimientoNumeroSerie
         '
         Me.Label1.Location = New System.Drawing.Point(30, 34)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(115, 13)
+        Me.Label1.Size = New System.Drawing.Size(48, 13)
         Me.Label1.TabIndex = 13
-        Me.Label1.Text = "Historial de activos"
+        Me.Label1.Text = "Activos"
         '
         'Grid2
         '
@@ -49,19 +49,19 @@ Partial Class frmSeguimientoNumeroSerie
         Me.Grid2.DesignTimeLayout = Grid2_DesignTimeLayout
         Me.Grid2.EnterKeyBehavior = Janus.Windows.GridEX.EnterKeyBehavior.NextCell
         Me.Grid2.EntityName = "ControlArticuloNSerie"
-        Me.Grid2.Location = New System.Drawing.Point(33, 76)
+        Me.Grid2.Location = New System.Drawing.Point(33, 64)
         Me.Grid2.Name = "Grid2"
         Me.Grid2.PrimaryDataFields = Nothing
         Me.Grid2.RelationMode = Solmicro.Expertis.Engine.RelationMode.NoRelation
         Me.Grid2.SecondaryDataFields = Nothing
-        Me.Grid2.Size = New System.Drawing.Size(659, 196)
+        Me.Grid2.Size = New System.Drawing.Size(787, 330)
         Me.Grid2.TabIndex = 15
         Me.Grid2.ViewName = "vControlArticulosNSerie"
         '
         'bCreaArticulo
         '
         Me.bCreaArticulo.Icon = CType(resources.GetObject("bCreaArticulo.Icon"), System.Drawing.Icon)
-        Me.bCreaArticulo.Location = New System.Drawing.Point(496, 28)
+        Me.bCreaArticulo.Location = New System.Drawing.Point(33, 434)
         Me.bCreaArticulo.Name = "bCreaArticulo"
         Me.bCreaArticulo.Size = New System.Drawing.Size(196, 23)
         Me.bCreaArticulo.TabIndex = 16
@@ -70,7 +70,7 @@ Partial Class frmSeguimientoNumeroSerie
         'bActualizar
         '
         Me.bActualizar.Icon = CType(resources.GetObject("bActualizar.Icon"), System.Drawing.Icon)
-        Me.bActualizar.Location = New System.Drawing.Point(433, 292)
+        Me.bActualizar.Location = New System.Drawing.Point(561, 434)
         Me.bActualizar.Name = "bActualizar"
         Me.bActualizar.Size = New System.Drawing.Size(259, 23)
         Me.bActualizar.TabIndex = 17
@@ -80,7 +80,7 @@ Partial Class frmSeguimientoNumeroSerie
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(724, 342)
+        Me.ClientSize = New System.Drawing.Size(915, 469)
         Me.Controls.Add(Me.bActualizar)
         Me.Controls.Add(Me.bCreaArticulo)
         Me.Controls.Add(Me.Grid2)
