@@ -1332,8 +1332,10 @@ Public Class CIRetornos
 
                                                 '------------- ACTUALIZACION ACTIVOS CON Nº DE SERIE 31/1/23
                                                 Dim nalbaran As String
+                                                Dim idAlmacenDeposito As String
+                                                idAlmacenDeposito = devuelveAlmacen(TraspasoInfo.IDObraDestino)
                                                 nalbaran = rslt.PropuestaAlbaranes.Rows(0)("NAlbaran")
-                                                seguimientoActivos(dtMarcados, nalbaran)
+                                                seguimientoActivos(dtMarcados, nalbaran, idAlmacenDeposito)
                                                 '------------- FIN ACTUALIZACION ACTIVOS
 
                                                 Dim frmStock As New DetalleActualizacionStock
@@ -1369,12 +1371,47 @@ Public Class CIRetornos
             ExpertisApp.GenerateMessage("Proceso cancelado. Es necesario asignar un Operario al Usuario.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
     End Sub
+    Public Function devuelveAlmacen(ByVal idObra As String) As String
+        Dim dt As New DataTable
+        Dim f As New Filter
+        f.Add("IDObra", idObra)
+        dt = New BE.DataEngine().Filter("tbObraCabecera", f)
+
+        Return dt.Rows(0)("IDAlmacen")
+    End Function
+    Public Sub seguimientoActivos(ByVal dtExpedir As DataTable, ByVal nalbaran As String, ByVal idAlmacenDeposito As String)
+        Dim fechaDocumento As String
+        Dim idAlmacenOrigen As String
+        Dim idAlmacenDestino As String
+
+        fechaDocumento = dtExpedir.Rows(0)("FechaDevolucion")
+        idAlmacenDestino = idAlmacenDeposito
+        idAlmacenOrigen = dtExpedir.Rows(0)("IDAlmacen")
+        'Seguimiento articulos con nº serie
+        Dim tbArticulos As DataTable
+        Dim f As New Filter(FilterUnionOperator.Or)
+        For Each fila As DataRow In dtExpedir.Rows
+            f.Add("IDArticulo", fila("IDMaterial"))
+        Next
+
+        tbArticulos = New BE.DataEngine().Filter("vControlArticulosNSerie", f)
+        If tbArticulos.Rows.Count <> 0 Then
+
+            Dim frmSegNSeries As New frmSeguimientoNumeroSerie
+            frmSegNSeries.filtro = f
+            frmSegNSeries.fechaDoc = fechaDocumento
+            frmSegNSeries.idalmacen = idAlmacenDestino
+            frmSegNSeries.idalmacenorigen = idAlmacenOrigen
+            frmSegNSeries.nalbaran = nalbaran
+            frmSegNSeries.ShowDialog()
+        End If
+    End Sub
     Public Sub seguimientoActivos(ByVal dtExpedir As DataTable, ByVal nalbaran As String)
         Dim fechaDocumento As String
         Dim idAlmacenOrigen As String
         Dim idAlmacenDestino As String
 
-        fechaDocumento = dtExpedir.Rows(0)("FechaAlbaran")
+        fechaDocumento = dtExpedir.Rows(0)("FechaDevolucion")
         idAlmacenDestino = dtExpedir.Rows(0)("IDAlmacenDeposito")
         idAlmacenOrigen = dtExpedir.Rows(0)("IDAlmacen")
         'Seguimiento articulos con nº serie
