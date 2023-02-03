@@ -6612,7 +6612,7 @@ Public Class MntoAlquiler
         Dim dt2 As New DataTable
         dt2 = New BE.DataEngine().Filter("vFrmAlquilerMateriales", f1, , "IDMaterial")
         Dim f2 As New Filter
-        f2.Add("IDAlmacen", FilterOperator.Equal, dt2.Rows(0)("IDAlmacen"))
+        'f2.Add("IDAlmacen", FilterOperator.Equal, dt2.Rows(0)("IDAlmacen"))
 
         Dim cont As Integer
         cont = 0
@@ -6630,6 +6630,7 @@ Public Class MntoAlquiler
                 Else
                     sumaStock += dt2.Rows(cont)("QPrev")
                     f2.Add("IDArticulo", FilterOperator.Equal, dt2.Rows(cont)("IDMaterial"))
+                    f2.Add("IDAlmacen", FilterOperator.Equal, dt2.Rows(0)("IDAlmacen"))
                     'Sumo los articulos con mismo ID y hago el check
                     dtCheck = New BE.DataEngine().Filter("tbMaestroArticuloAlmacen", f2)
                     If dtCheck.Rows(0)("StockFisico") >= sumaStock Then
@@ -6642,7 +6643,9 @@ Public Class MntoAlquiler
                 cont += 1
             Catch ex As Exception
                 sumaStock += dt2.Rows(cont)("QPrev")
+
                 f2.Add("IDArticulo", FilterOperator.Equal, dt2.Rows(cont)("IDMaterial"))
+                f2.Add("IDAlmacen", FilterOperator.Equal, dt2.Rows(0)("IDAlmacen"))
                 'Sumo los articulos con mismo ID y hago el check
                 dtCheck = New BE.DataEngine().Filter("tbMaestroArticuloAlmacen", f2)
                 If dtCheck.Rows(0)("StockFisico") >= sumaStock Then
