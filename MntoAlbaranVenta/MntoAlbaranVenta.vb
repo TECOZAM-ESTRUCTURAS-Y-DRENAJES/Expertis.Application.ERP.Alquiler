@@ -219,13 +219,13 @@ Public Class MntoAlbaranVenta
         FwiEmpresaNotaTransporte_DesignTimeLayout.LayoutString = resources.GetString("FwiEmpresaNotaTransporte_DesignTimeLayout.LayoutString")
         Me.FwiEmpresaNotaTransporte.DesignTimeLayout = FwiEmpresaNotaTransporte_DesignTimeLayout
         '
-        'Label1
-        '
-        Me.Label1.Location = New System.Drawing.Point(8, 143)
-        '
         'Label3
         '
         Me.Label3.Location = New System.Drawing.Point(330, 142)
+        '
+        'Label1
+        '
+        Me.Label1.Location = New System.Drawing.Point(8, 143)
         '
         'MSeries
         '
@@ -233,7 +233,7 @@ Public Class MntoAlbaranVenta
         '
         'TabAlbaranes
         '
-        Me.TabAlbaranes.Size = New System.Drawing.Size(1032, 410)
+        Me.TabAlbaranes.Size = New System.Drawing.Size(1032, 384)
         Me.TabAlbaranes.TabPages.AddRange(New Janus.Windows.UI.Tab.UITabPage() {Me.TabPagePicContadores})
         Me.TabAlbaranes.Controls.SetChildIndex(Me.TabPageAnotaciones, 0)
         Me.TabAlbaranes.Controls.SetChildIndex(Me.TabPageEnvios, 0)
@@ -252,7 +252,7 @@ Public Class MntoAlbaranVenta
         '
         'TabPagePicLineas
         '
-        Me.TabPagePicLineas.Size = New System.Drawing.Size(1030, 388)
+        Me.TabPagePicLineas.Size = New System.Drawing.Size(1030, 362)
         '
         'TabPagePicDatosEconomicos
         '
@@ -309,7 +309,7 @@ Public Class MntoAlbaranVenta
         '
         'PnlTotales
         '
-        Me.PnlTotales.Location = New System.Drawing.Point(0, 356)
+        Me.PnlTotales.Location = New System.Drawing.Point(0, 330)
         Me.PnlTotales.Size = New System.Drawing.Size(1030, 32)
         '
         'LblImporteTotal
@@ -325,7 +325,7 @@ Public Class MntoAlbaranVenta
         '
         GridLineaAlbaran_DesignTimeLayout.LayoutString = resources.GetString("GridLineaAlbaran_DesignTimeLayout.LayoutString")
         Me.GridLineaAlbaran.DesignTimeLayout = GridLineaAlbaran_DesignTimeLayout
-        Me.GridLineaAlbaran.Size = New System.Drawing.Size(1030, 356)
+        Me.GridLineaAlbaran.Size = New System.Drawing.Size(1030, 330)
         '
         'FrmResEcon
         '
@@ -401,7 +401,7 @@ Public Class MntoAlbaranVenta
         '
         'LblDescMonedaA
         '
-        Me.LblDescMonedaA.Location = New System.Drawing.Point(605, 212)
+        Me.LblDescMonedaA.Location = New System.Drawing.Point(605, 198)
         '
         'LineDescuentos
         '
@@ -465,7 +465,7 @@ Public Class MntoAlbaranVenta
         '
         'ToolBar
         '
-        Me.ToolBar.Location = New System.Drawing.Point(22, 0)
+        Me.ToolBar.Location = New System.Drawing.Point(22, 26)
         '
         'MenuBar
         '
@@ -473,7 +473,7 @@ Public Class MntoAlbaranVenta
         '
         'MainPanel
         '
-        Me.MainPanel.Size = New System.Drawing.Size(1032, 577)
+        Me.MainPanel.Size = New System.Drawing.Size(1032, 551)
         '
         'lblUbicacion
         '

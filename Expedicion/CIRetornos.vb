@@ -1341,6 +1341,7 @@ Public Class CIRetornos
                                                 Dim frmStock As New DetalleActualizacionStock
                                                 frmStock.DataSource = rslt.StockUpdateData
                                                 frmStock.ShowDialog()
+
                                             Else
                                                 ExpertisApp.GenerateMessage("Proceso cancelado.", MessageBoxButtons.OK, MessageBoxIcon.Information)
                                             End If
@@ -1839,7 +1840,7 @@ Public Class CIRetornos
                 If Not IsNothing(dtMarcados) AndAlso dtMarcados.Rows.Count > 0 Then
                     Me.Cursor = Cursors.WaitCursor
 
-                    Dim aExpedir() As CrearAlbaranVentaInfo= DatosAExpedirTraspaso(dtMarcados.Copy, datosTraspaso.FechaRetorno, datosTraspaso.HoraRetorno)
+                    Dim aExpedir() As CrearAlbaranVentaInfo = DatosAExpedirTraspaso(dtMarcados.Copy, datosTraspaso.FechaRetorno, datosTraspaso.HoraRetorno)
                     Dim data As New DataPrcAlbaranar(aExpedir, AdvContador.Text, , mstrALBARANDEPOSITO, Business.BusinessEnum.enumTipoExpedicion.teAlquiler)
                     Dim Propuesta As ResultAlbaranAlquiler = New BE.DataEngine().RunProcess(GetType(PrcAlbaranarAlquiler), data)
                     If Not IsNothing(Propuesta) Then
@@ -2218,7 +2219,7 @@ Public Class CIRetornos
 #Region " Grid "
 
     Private Sub CIRetornos_CheckingRecord(ByVal sender As Object, ByVal e As Engine.UI.CheckingEventArgs) Handles MyBase.CheckingRecord
-        Dim blnCancelCheck As Boolean= False
+        Dim blnCancelCheck As Boolean = False
         With Grid
             If e.CheckState = CheckStates.UnChecked Then
                 If Length(cbxFecha.Value) > 0 AndAlso IsDate(cbxFecha.Value) Then

@@ -98,10 +98,8 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Expertis.Application.ERP.AlbaranVenta">
-      <Name>Expertis.Application.ERP.AlbaranVenta</Name>
-      <HintPath>..\..\..\Bin\Expertis.Application.ERP.AlbaranVenta.dll</HintPath>
-      <AssemblyFolderKey>hklm\expertis.engine</AssemblyFolderKey>
+    <Reference Include="Expertis.Application.ERP.AlbaranVenta, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
     <Reference Include="Expertis.Application.ERP.CFDisplay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -128,6 +126,7 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Expertis.Application.ERP.Help, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Expertis.Application.ERP.Obras, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
@@ -313,6 +312,7 @@
     <Compile Include="Consultas\MovimientosNormales.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Correos.vb" />
     <Compile Include="Expedicion\CIExpedicion.vb">
       <SubType>Form</SubType>
     </Compile>

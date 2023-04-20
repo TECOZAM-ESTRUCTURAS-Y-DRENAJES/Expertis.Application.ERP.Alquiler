@@ -1,3 +1,5 @@
+Imports System.Text
+
 Module General
 
 #Region " Abrir formularios "
@@ -48,6 +50,7 @@ Module General
 #End Region
 
 #Region " Genera Albarán "
+    Private Delegate Function EnviarCorreoPrueba(ByVal data As SmtpServerInfo) As LogProcess
 
     Public Enum enumTipoAlbaran
         Albaran = 0
@@ -164,12 +167,14 @@ Module General
                             nalbaran = rslt.PropuestaAlbaranes.Rows(0)("NAlbaran")
                             seguimientoActivos(dtExpedir, nalbaran)
 
+                            'David V. 14/02/2023
+                            'Pregunta yes no si mandar un correo a miguel/raquel/david
+                            'Si esta por debajo del stock minimo
+                            mandaCorreoStockMinimo(dtExpedir)
+
+
                             TratarLog(rslt.CreateData, enumTipoDocumentoCreado.AlbaranVentaAlquiler, True, True, rslt.StockUpdateData)
-
                             oCursor = Cursors.Default
-
-                            
-
                         Else
                             ExpertisApp.GenerateMessage("Proceso cancelado.", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         End If
@@ -181,6 +186,61 @@ Module General
                 End If
             End If
         End If
+    End Sub
+
+    Public Sub mandaCorreoStockMinimo(ByVal dtMovimientos As DataTable)
+        Dim bandera As Boolean = False
+        Dim dtArtStockAlmacen As New DataTable
+        Dim dtArticulo As New DataTable
+        Dim f As New Filter
+        Dim builder As New StringBuilder
+
+        For Each dr As DataRow In dtMovimientos.Rows
+            f.Add("IDArticulo", FilterOperator.Equal, dr("IDMaterial"))
+            dtArticulo = New BE.DataEngine().Filter("tbMaestroArticulo", f)
+            f.Add("IDAlmacen", FilterOperator.Equal, dr("IDAlmacen"))
+            dtArtStockAlmacen = New BE.DataEngine().Filter("tbMaestroArticuloAlmacen", f)
+
+            'Si el stock - cantidad es menor o igual que stockminimo, mandar correo
+            'Lo meto en un try porque la mayoria de articulos tiene el stockminimo a null
+            Try
+                If CDbl(dtArtStockAlmacen.Rows(0)("StockFisico")) < CDbl(dtArticulo.Rows(0)("StockMinimo")) Then
+                    bandera = True
+                    builder.AppendLine("El articulo " & dr("IDMaterial") & "= " & dtArticulo.Rows(0)("DescArticulo") & " está por debajo del stock minimo fijado.")
+                End If
+            Catch ex As Exception
+            End Try
+            f.Clear()
+            dtArtStockAlmacen.Clear()
+            dtArticulo.Clear()
+        Next
+
+        If bandera = True Then
+            enviarCorreoStockMinimo(builder.ToString)
+            'MsgBox(builder.ToString)
+        End If
+    End Sub
+    Public Sub enviarCorreoStockMinimo(ByVal cuerpoCorreo As String)
+        Dim ParamInfo As New Business.General.SmtpServerInfo
+        ParamInfo.SmtpServerName = "smtp.tecozam.com"
+        ParamInfo.SmtpServerPort = "587"
+        ParamInfo.UseSSL = False
+        ParamInfo.UserMail = "david.velasco@tecozam.com"
+        ParamInfo.Cuerpo = cuerpoCorreo
+        ParamInfo.UserName = "david.velasco@tecozam.com"
+        ParamInfo.UserPassword = "DavidV123"
+        Dim StrMsg As String = "El envío artículos con stocks mínimo se está realizando."
+        Dim StrNomForm As String = "Enviando correo..."
+        Dim oFrmProc As New ERP.CommonClasses.FrmProgresoProceso
+
+
+        Dim StartDelegate As New EnviarCorreoPrueba(AddressOf Correos.EnviarMailTest)
+        Dim LogPrc As LogProcess = oFrmProc.Start(StartDelegate, New Object() {ParamInfo}, StrMsg, StrNomForm)
+
+        'If Not LogPrc Is Nothing AndAlso (LogPrc.CreatedElements.Length > 0 OrElse LogPrc.Errors.Length > 0) Then
+        '    Correos.TratarMailLog(LogPrc)
+        'End If
+
     End Sub
     Public Sub seguimientoActivos(ByVal dtExpedir As DataTable, ByVal nalbaran As String)
         Dim fechaDocumento As String
