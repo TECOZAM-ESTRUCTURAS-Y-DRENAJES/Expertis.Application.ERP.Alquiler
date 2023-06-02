@@ -8022,7 +8022,7 @@ Public Class MntoAlquiler
                     End Try
 
                     If (tipo = "30" Or familia = "2003" Or familia = "2004" Or subfamilia = "HIDRAULICA") Then
-                        If (familia <> "3031") Then
+                        If (familia <> "3031" And familia <> "3033") Then
                             .SetValue("TipoFactAlquiler", CInt(enumTipoFacturacionAlquiler.enumTFADiasNaturales))
                             .SetValue("TipoFacturacion", CInt(enumomATipoFacturacionAlquiler.omAPorAlquiler))
                         End If
@@ -8072,7 +8072,7 @@ Public Class MntoAlquiler
                     End Try
 
                     If (tipo = "30" Or familia = "2003" Or familia = "2004") Then
-                        If (familia <> "3031") Then
+                        If (familia <> "3031" And familia <> "3033") Then
                             .SetValue("TipoFactAlquiler", CInt(enumTipoFacturacionAlquiler.enumTFADiasNaturales))
                             .SetValue("TipoFacturacion", CInt(enumomATipoFacturacionAlquiler.omAPorAlquiler))
                         End If
