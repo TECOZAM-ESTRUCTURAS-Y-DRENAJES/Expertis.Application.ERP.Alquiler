@@ -225,10 +225,10 @@ Module General
         ParamInfo.SmtpServerName = "smtp.tecozam.com"
         ParamInfo.SmtpServerPort = "587"
         ParamInfo.UseSSL = False
-        ParamInfo.UserMail = "david.velasco@tecozam.com"
+        ParamInfo.UserMail = "raquel.martin@tecozam.com"
         ParamInfo.Cuerpo = cuerpoCorreo
-        ParamInfo.UserName = "david.velasco@tecozam.com"
-        ParamInfo.UserPassword = "DavidV123"
+        ParamInfo.UserName = "raquel.martin@tecozam.com"
+        ParamInfo.UserPassword = "RaquelM4321"
         Dim StrMsg As String = "El envío artículos con stocks mínimo se está realizando."
         Dim StrNomForm As String = "Enviando correo..."
         Dim oFrmProc As New ERP.CommonClasses.FrmProgresoProceso
