@@ -1022,45 +1022,45 @@
   <data name="mnuRetornoAvisos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        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
-        CcvHeIwPJHbEAAAAAElFTkSuQmCC
+        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
+        RU5ErkJggg==
 </value>
   </data>
   <data name="mnuRetornoMaterial.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -13630,40 +13630,40 @@
   <data name="GridSegurosExcesoContadores_DesignTimeLayout_Reference_0.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridSegurosExcesoContadores_DesignTimeLayout_Reference_1.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridSegurosExcesoContadores_DesignTimeLayout_Reference_2.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridSegurosExcesoContadores_DesignTimeLayout.LayoutString" xml:space="preserve">
@@ -13672,53 +13672,53 @@
   <data name="GridSeguros_DesignTimeLayout_Reference_0.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridSeguros_DesignTimeLayout_Reference_1.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridSeguros_DesignTimeLayout_Reference_2.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridSeguros_DesignTimeLayout_Reference_3.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridSeguros_DesignTimeLayout.LayoutString" xml:space="preserve">
@@ -13730,14 +13730,14 @@
   <data name="GridSegurosArticulos_DesignTimeLayout_Reference_0.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridSegurosArticulos_DesignTimeLayout.LayoutString" xml:space="preserve">
@@ -13746,14 +13746,14 @@
   <data name="GridSegurosTarifas_DesignTimeLayout_Reference_0.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridSegurosTarifas_DesignTimeLayout.LayoutString" xml:space="preserve">
@@ -13762,27 +13762,27 @@
   <data name="GridSegurosDtos_DesignTimeLayout_Reference_0.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridSegurosDtos_DesignTimeLayout_Reference_1.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridSegurosDtos_DesignTimeLayout.LayoutString" xml:space="preserve">
@@ -13796,7 +13796,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACo
-        FgAAAk1TRnQBSQFMAgEBDQEAAZQBBgGUAQYBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        FgAAAk1TRnQBSQFMAgEBDQEAAZwBBgGcAQYBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAAUADAAEBAQABCAYAARAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -13916,131 +13916,131 @@
   <data name="GridMaterial_DesignTimeLayout_Reference_0.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridMaterial_DesignTimeLayout_Reference_1.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridMaterial_DesignTimeLayout_Reference_2.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridMaterial_DesignTimeLayout_Reference_3.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridMaterial_DesignTimeLayout_Reference_4.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridMaterial_DesignTimeLayout_Reference_5.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridMaterial_DesignTimeLayout_Reference_6.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridMaterial_DesignTimeLayout_Reference_7.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridMaterial_DesignTimeLayout_Reference_8.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridMaterial_DesignTimeLayout_Reference_9.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridMaterial_DesignTimeLayout.LayoutString" xml:space="preserve">
@@ -14049,40 +14049,40 @@
   <data name="GridIncidencias_DesignTimeLayout_Reference_0.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridIncidencias_DesignTimeLayout_Reference_1.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridIncidencias_DesignTimeLayout_Reference_2.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridIncidencias_DesignTimeLayout_Reference_3.Instance" mimetype="application/x-microsoft.net.object.binary.base64">
@@ -14090,7 +14090,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABQ
-        CAAAAk1TRnQBSQFMAwEBAAEEAQABlAEGARABAAEQAQAE/wEJARAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        CAAAAk1TRnQBSQFMAwEBAAEEAQABnAEGARABAAEQAQAE/wEJARAI/wFCAU0BNgEEBgABNgEEAgABKAMA
         AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
         AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
         AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
@@ -14137,118 +14137,118 @@
   <data name="GridVencimientos_DesignTimeLayout_Reference_0.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridVencimientos_DesignTimeLayout_Reference_1.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridVencimientos_DesignTimeLayout_Reference_2.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridVencimientos_DesignTimeLayout_Reference_3.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridVencimientos_DesignTimeLayout_Reference_4.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridVencimientos_DesignTimeLayout_Reference_5.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridVencimientos_DesignTimeLayout_Reference_6.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridVencimientos_DesignTimeLayout_Reference_7.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridVencimientos_DesignTimeLayout_Reference_8.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridVencimientos_DesignTimeLayout_Reference_9.Instance" mimetype="application/x-microsoft.net.object.binary.base64">
@@ -14256,7 +14256,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABQ
-        CAAAAk1TRnQBSQFMAwEBAAEEAQABlAEGARABAAEQAQAE/wEJARAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        CAAAAk1TRnQBSQFMAwEBAAEEAQABnAEGARABAAEQAQAE/wEJARAI/wFCAU0BNgEEBgABNgEEAgABKAMA
         AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
         AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
         AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
@@ -14303,40 +14303,40 @@
   <data name="GridOperariosOrdenServicio_DesignTimeLayout_Reference_0.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridOperariosOrdenServicio_DesignTimeLayout_Reference_1.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridOperariosOrdenServicio_DesignTimeLayout_Reference_2.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridOperariosOrdenServicio_DesignTimeLayout_Reference_3.Instance" mimetype="application/x-microsoft.net.object.binary.base64">
@@ -14344,7 +14344,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABQ
-        CAAAAk1TRnQBSQFMAwEBAAEEAQABlAEGARABAAEQAQAE/wEJARAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        CAAAAk1TRnQBSQFMAwEBAAEEAQABnAEGARABAAEQAQAE/wEJARAI/wFCAU0BNgEEBgABNgEEAgABKAMA
         AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
         AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
         AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
@@ -14394,66 +14394,66 @@
   <data name="GridRepresentantes_DesignTimeLayout_Reference_0.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridRepresentantes_DesignTimeLayout_Reference_1.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridRepresentantes_DesignTimeLayout_Reference_2.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridRepresentantes_DesignTimeLayout_Reference_3.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridRepresentantes_DesignTimeLayout_Reference_4.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridRepresentantes_DesignTimeLayout.LayoutString" xml:space="preserve">
@@ -14464,7 +14464,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABQ
-        CQAAAk1TRnQBSQFMAgEBAgEAAQQBAAGUAQYBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CQAAAk1TRnQBSQFMAgEBAgEAAQQBAAGcAQYBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -14512,14 +14512,14 @@
   <data name="GridRecursos_DesignTimeLayout_Reference_0.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpUlEQVQ4T7WSsWvbUBDG/WdkzZjRo1dB
-        h7wxWwQdishg3hQ0GaEliAxCeBDCgxEZDF4CymB4HQzqElCHgDoY1KGgJYOGDh46ePz1ZKsJjZPgof3g
-        eHDvvu99d/d6/xz9y5y+XzG4LnHGOV36MByNak5uYDADeylxKzEpDxNRI8Ox3+CGGTo0DMIa/QWsSX2Y
-        wPEwxx2bp2IvNjgL8O7BiXet6Ok7bo7Os71LK66JHqB/VWLP6m10V/tQ4bO6EqKKK06EmIhAIK2k30BN
-        qrcF3EuX4CogiROUL/bvNqQrtgLteTZr3ibb5zbBdUC1qijuC8zCyDwyebEm+74TsMYVzifndRF1qshu
-        M7K7jPQmJZ2mtI6s0zP5D4VsouIPWpdRGO0L6aHGG3nbFtbrNc1jg+dHOBca+6NN+VCSLwvKVUPxQ7Yj
-        tR31GdYHa+sgXxrmi4L1Bsxqg2rz04T5sqL+BcVP0CLe0f5G22c0TigaKKXQPMpvFAf6QvKzgrnMI5XB
-        ammxo+yjbSf5ultd9Ll+stue2k+E/Ir9l3CG7q5YxLrU/0Cv9xs9aE2dQXKVowAAAABJRU5ErkJggg==
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABmElEQVQ4T62RoWvjUBzH+2fMTk5W1gYm
+        9uTcAieOMFGeKlElxJRQEUJECBElTBRqBpkovIlCZgaZKOREICcOnpmImKg4UfkZSVkPum43uPvC4wfv
+        930fvl9er/e/1R/l9N2awbTECnMO95/qZKw5u4HBHMwVmLdgJuXXIGKsOHUbbD9D+oqBr5EPYCT6a4DT
+        YY4dqr3ZiRTWEpxHsKJdFTn7JM3JVfZuaUSaYA39SYk519059Owl/D90EWlEVHM2KYnX4D1A+gNEUn8M
+        sEc23sQjjmKEq7DutqQVHaCdl/Pm48fmlYk39airmuKxQC0VdpghEk32cwcwwhrru3UcIi4E2W1GdpeR
+        3qSks5Q2kXFxyWBaYCQ1b2pTBn7wHiSHEmfsdBU2mw3Nc4PjBljXEvObSbkuyVcFZdVQ/KLzHjJ6xrnR
+        JchXisWyYLMFVW0R7f0sZrGq0b+heAHpHknRqu0ZhDFFA+ULqGe6BPLaIpgXLCpI1yBH9nFAq7ZO/LT7
+        uuBe7+O2U7oxcnQk/qGsob0zD+Xfzf+iVz1oTZ2XK1+qAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GridRecursos_DesignTimeLayout_Reference_1.Instance" mimetype="application/x-microsoft.net.object.binary.base64">
@@ -14527,7 +14527,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABQ
-        CAAAAk1TRnQBSQFMAwEBAAEEAQABlAEGARABAAEQAQAE/wEJARAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        CAAAAk1TRnQBSQFMAwEBAAEEAQABnAEGARABAAEQAQAE/wEJARAI/wFCAU0BNgEEBgABNgEEAgABKAMA
         AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
         AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
         AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm

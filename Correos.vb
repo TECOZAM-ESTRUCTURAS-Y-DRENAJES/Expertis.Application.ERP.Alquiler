@@ -162,7 +162,7 @@ Public Class Correos
         MailTest.Mails(0) = New EmailInfo
         MailTest.Mails(0).Asunto = "CORREO GENERADO POR EXPERTIS - ARTICULOS CON STOCK POR DEBAJO DEL MINIMO"
         MailTest.Mails(0).Mensaje = data.Cuerpo
-        MailTest.Mails(0).EMailsCC = "raquel.martin@tecozam.com;aaron.gutierrez@tecozam.com;miguel.vicente@tecozam.com;jose.giron@tecozam.com"
+        MailTest.Mails(0).EMailsCC = "aaron.gutierrez@tecozam.com;jaime.moran@tecozam.com;jose.giron@tecozam.com"
         MailTest.Mails(0).Email = data.UserMail
         Return SendMail(MailTest)
     End Function
